@@ -1,0 +1,13 @@
+# directory-based project configuration
+.idea/
+
+# file-based project configuration
+*.iws
+*.iml
+*.ipr
+
+# installed npm packages
+node_modules/
+
+# generated via package.json
+package-lock.json
