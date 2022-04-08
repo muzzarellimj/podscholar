@@ -1,0 +1,29 @@
+{
+	"name": "podscholar",
+	"version": "0.0.1",
+	"description": "A content distribution platform to podcast scholarly research.",
+	"homepage": "https://github.com/muzzarellimj/podscholar",
+	"author": {
+		"name": "Michael Muzzarelli",
+		"email": "muzzarellm1@nku.edu",
+		"url": "https://github.com/muzzarellimj"
+	},
+	"contributors": [
+		{
+			"name": "Robert Adams",
+			"email": "adamsr15@nku.edu",
+			"url": "https://github.com/adamsr15"
+		},
+		{
+			"name": "Jyhdel Pamonag",
+			"email": "pamonagj1@nku.edu",
+			"url": "https://github.com/jmlpamonag"
+		}
+	],
+	"main": "app/app.js",
+	"scripts": {
+		"start": "node app/app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"private": true
+}
