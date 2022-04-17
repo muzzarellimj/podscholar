@@ -1,4 +1,16 @@
 @import url("https://rsms.me/inter/inter.css");
+.svg-filter-primary {
+  filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%);
+}
+
+.svg-filter-secondary {
+  filter: invert(49%) sepia(10%) saturate(1619%) hue-rotate(112deg) brightness(94%) contrast(89%);
+}
+
+.svg-filter-tertiary {
+  filter: invert(67%) sepia(27%) saturate(0%) hue-rotate(195deg) brightness(94%) contrast(91%);
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
