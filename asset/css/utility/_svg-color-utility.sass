@@ -1,0 +1,14 @@
+// svg color filtering is most effective on images that are initially black with a transparent background
+// filter selection is within 0.5% of generated with this codepen: https://codepen.io/sosuke/pen/Pjoqqp
+
+// filter to match primary color
+.svg-filter-primary
+	filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%)
+
+// filter to match secondary color
+.svg-filter-secondary
+	filter: invert(49%) sepia(10%) saturate(1619%) hue-rotate(112deg) brightness(94%) contrast(89%)
+
+// filter to match tertiary color
+.svg-filter-tertiary
+	filter: invert(67%) sepia(27%) saturate(0%) hue-rotate(195deg) brightness(94%) contrast(91%)
