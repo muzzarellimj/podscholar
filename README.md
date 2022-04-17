@@ -1,12 +1,15 @@
-# PodScholar
+# PodScholar: `static`
 
-PodScholar is an online content distribution platform facilitating the recording and broadcasting of scholarly research
-in a more casual, digestible format: a podcast. With each podcast published, the author is granted the opportunity to
-discuss the research methods and results in a more conversational tone and without the rigidity that a formal
-presentation may provide. Such conversation is then encouraged between the podcast author and listeners thereof to
-discuss the content and share additional resources.
+The `static` branch is an isolated environment to test static HTML and CSS prior to implementing it in our Node 
+environment. The `main` branch should be the most up-to-date as far as proper functionality - this is more of a test 
+suite.
 
-PodScholar is in active development and is meant to serve as the final assignment for ASE 220, Full Stack Application
-Development, at Northern Kentucky University in the Spring 2022 semester. The development team consists of
-[Michael Muzzarelli](https://github.com/muzzarellimj), [Robert Adams](https://github.com/adamsr15), and
-[Jyhdel Pamonag](https://github.com/jmlpamonag).
+## Usage
+
+[Bootstrap 5.1](https://getbootstrap.com/docs/5.1/) is a vendor asset in our project, and due to the lack of a package 
+manager in this environment, the source code must be included, imported in 
+[our Sass stylesheet](asset/css/primary.sass), and compiled for runtime. To this end, a file watcher should be created
+with [WebStorm](https://www.jetbrains.com/help/webstorm/using-file-watchers.html#ws_creating_file_watchers) or 
+[this](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) VSC extension. Note: the file watcher 
+should **only** watch and compile `primary.sass` - all other files can be ignored and imported to the aggregate script 
+as necessary to save space.
