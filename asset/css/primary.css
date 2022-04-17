@@ -1,0 +1,11 @@
+@import url("https://rsms.me/inter/inter.css");
+body {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/*# sourceMappingURL=primary.css.map */
