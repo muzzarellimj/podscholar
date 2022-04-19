@@ -8,6 +8,19 @@ body {
   }
 }
 
+.navbar .navbar-brand-image {
+  height: 2.75rem;
+}
+.navbar .nav-link {
+  color: rgba(19, 57, 96, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0.75rem;
+}
+.navbar .nav-link:active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #133960;
+}
+
 .svg-filter-primary {
   filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%);
 }
