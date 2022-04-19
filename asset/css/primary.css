@@ -8,6 +8,10 @@ body {
   }
 }
 
+main {
+  background-color: rgba(166, 166, 166, 0.075);
+}
+
 .navbar .navbar-brand-image {
   height: 2.75rem;
 }
