@@ -1,4 +1,13 @@
 @import url("https://rsms.me/inter/inter.css");
+body {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
 .svg-filter-primary {
   filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%);
 }
@@ -9,15 +18,6 @@
 
 .svg-filter-tertiary {
   filter: invert(67%) sepia(27%) saturate(0%) hue-rotate(195deg) brightness(94%) contrast(91%);
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Inter var", sans-serif;
-  }
 }
 
 /*# sourceMappingURL=primary.css.map */
