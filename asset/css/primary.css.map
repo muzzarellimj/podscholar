@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["primary.sass","utility/_svg-color-utility.sass"],"names":[],"mappings":"AAAQ;ACIR;EACC;;;AAGD;EACC;;;AAGD;EACC;;;ADRD;EACC;;AAEA;EAHD;IAIE","file":"primary.css"}
+{"version":3,"sourceRoot":"","sources":["primary.sass","section/_main.sass","component/_navigation.sass","utility/_svg-color-utility.sass"],"names":[],"mappings":"AAAQ;AAER;EACC;;AAEA;EAHD;IAIE;;;;ACNF;EACC;;;ACAA;EACC;;AAED;EACC;EACA;EACA;EACA;;AAEA;EACC;;;ACPH;EACC;;;AAGD;EACC;;;AAGD;EACC","file":"primary.css"}

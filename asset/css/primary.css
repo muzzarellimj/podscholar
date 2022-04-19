@@ -1,4 +1,30 @@
 @import url("https://rsms.me/inter/inter.css");
+body {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+main {
+  background-color: rgba(166, 166, 166, 0.075);
+}
+
+.navbar .navbar-brand-image {
+  height: 2.75rem;
+}
+.navbar .nav-link {
+  color: rgba(19, 57, 96, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0.75rem;
+}
+.navbar .nav-link:active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #133960;
+}
+
 .svg-filter-primary {
   filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%);
 }
@@ -9,15 +35,6 @@
 
 .svg-filter-tertiary {
   filter: invert(67%) sepia(27%) saturate(0%) hue-rotate(195deg) brightness(94%) contrast(91%);
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Inter var", sans-serif;
-  }
 }
 
 /*# sourceMappingURL=primary.css.map */

@@ -4,6 +4,8 @@ The `static` branch is an isolated environment to test static HTML and CSS prior
 environment. The `main` branch should be the most up-to-date as far as proper functionality - this is more of a test 
 suite.
 
+Technical documentation (route overview, component design, etc.) can be found [here](documentation/technical.md).
+
 ## Usage
 
 [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/) is a vendor asset in our project, and due to the lack of a package 
