@@ -70,9 +70,25 @@ text.
 
 ### General Search at `/search/:query`
 
+An entirely dynamic page that will feel similar to the [home page](#home-at-), but a feed that matches search results
+rather than a general feed of the most recent content. A [collapsible filter menu](#collapsible-filter-menu) will be
+stacked just below the search bar.
+
 ### Scientific Discipline Index at `/category`
 
+An entirely dynamic page that could mimic a [Tailwind card grid list](https://tailwindui.com/img/components/grid-lists.03-simple-cards-xl.png) 
+layout to present each scientific discipline that, when clicked, route to the [sub-discipline index](#sub-disciplines-within-scientific-disciplines-index-at-categorysubcategory)
+which would have a similar view of a card grid.
+
+### Sub-disciplines within Scientific Disciplines Index at `/category/:subcategory`
+
+An entirely dynamic page that could look identical to the [scientific discipline index](#scientific-discipline-index-at-category),
+but clicking a card would route to a [general search](#general-search-at-searchquery) of the selected sub-discipline.
+
 ### Keyword Index at `/keyword`
+
+An entirely dynamic page that could look identical to the [scientific sub-discipline index](#sub-disciplines-within-scientific-disciplines-index-at-categorysubcategory),
+but clicking a card would route to a [general search](#general-search-at-searchquery) of the selected keyword.
 
 
 ## Authentication
