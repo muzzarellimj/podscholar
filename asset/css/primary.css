@@ -55,6 +55,10 @@ input:active, input:focus, input:hover {
   border-color: #133960 !important;
   box-shadow: none !important;
 }
+input::placeholder {
+  color: rgba(19, 57, 96, 0.7) !important;
+  font-size: 0.875rem;
+}
 
 label {
   color: #133960;
