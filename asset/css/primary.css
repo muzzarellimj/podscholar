@@ -4693,5 +4693,8 @@
     display: none !important;
   }
 }
+.navbar-brand-image {
+  height: 3rem;
+}
 
 /*# sourceMappingURL=primary.css.map */
