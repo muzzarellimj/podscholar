@@ -7,21 +7,21 @@
 
 		<title>PodScholar | Upload. Listen. Share.</title>
 
-		<link rel="stylesheet" href="../asset/vendor/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../asset/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="../asset/css/primary.css">
-
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
 		<link rel="shortcut icon" href="../asset/img/brand/brand-primary.svg">
 	</head>
 
 	<body>
 		<header class="border-bottom">
-			<nav class="navbar navbar-expand-lg">
+			<nav class="navbar navbar-expand-md">
 				<div class="container">
-					<a class="navbar-brand" href="index.html">
-						<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
-					</a>
+					<div class="d-flex navbar-brand-container">
+						<a class="navbar-brand" href="index.html">
+							<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
+						</a>
+					</div>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-navigation" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -29,31 +29,101 @@
 
 					<div id="primary-navigation" class="collapse navbar-collapse">
 						<ul class="navbar-nav mx-auto">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="#">Pricing & FAQ</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
+							<li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Pricing & FAQ</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 						</ul>
 
-						<a class="nav-link" href="#">Register<i class="bi bi-arrow-right ms-2"></i></a>
+						<div class="d-flex navbar-account-container">
+							<a class="nav-link" href="#">Register<i class="bi bi-arrow-right ms-2"></i></a>
+						</div>
 					</div>
 				</div>
 			</nav>
 		</header>
 
-		<main></main>
+		<main>
+			<section class="general-search py-4">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-10 col-xl-8 col-xxl-6">
+							<label for="general-search" class="visually-hidden">Search by category, keyword, title, author, or DOI</label>
+							<input id="general-search" class="form-control" type="text" placeholder="Search by category, keyword, title, author, or DOI">
+						</div>
+					</div>
+				</div>
+			</section>
 
-		<script src="../asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+			<section class="feed-filter">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="feed-filter-hint-container col-1 d-flex justify-content-end align-items-center">
+							<i id="feed-filter-hint-left" class="bi bi-arrow-left"></i>
+						</div>
+
+						<div class="col-10 col-xl-8 col-xxl-6">
+							<div class="feed-filter-outer-container">
+								<div class="feed-filter-inner-container">
+									<button class="btn btn-sm btn-primary" type="button">all</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="feed-filter-hint-container col-1 d-flex justify-content-start align-items-center">
+							<i id="feed-filter-hint-right" class="bi bi-arrow-right"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="../asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- feed filter -->
+		<script>
+			let parent = document.querySelector('.feed-filter');
+
+			let container = parent.querySelector('.feed-filter-inner-container');
+			let hintLeft = parent.querySelector('#feed-filter-hint-left');
+			let hintRight = parent.querySelector('#feed-filter-hint-right');
+
+			hintLeft.setAttribute('class', 'visually-hidden');
+
+			container.addEventListener('scroll', (event) => {
+				let leftOffset = event.currentTarget.scrollLeft;
+				let maximumLeftOffset = container.scrollWidth - container.clientWidth;
+
+				if (leftOffset === 0) {
+					hintLeft.setAttribute('class', 'visually-hidden');
+				} else if (leftOffset > 0 && leftOffset < maximumLeftOffset) {
+					hintLeft.setAttribute('class', 'bi bi-arrow-left');
+					hintRight.setAttribute('class', 'bi bi-arrow-right');
+				} else if (leftOffset >= maximumLeftOffset) {
+					hintRight.setAttribute('class', 'visually-hidden');
+				}
+			});
+		</script>
 	</body>
 </html>

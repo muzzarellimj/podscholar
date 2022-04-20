@@ -1,40 +1,97 @@
 @import url("https://rsms.me/inter/inter.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 body {
+  background: #F9FAFB;
+  color: #133960;
   font-family: "Inter", sans-serif;
 }
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Inter var", sans-serif;
-  }
-}
 
-main {
-  background-color: rgba(166, 166, 166, 0.075);
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+  height: 2rem;
 }
-
-.navbar .navbar-brand-image {
-  height: 2.75rem;
-}
-.navbar .nav-link {
-  color: rgba(19, 57, 96, 0.7);
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin: 0 0.75rem;
-}
-.navbar .nav-link:active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+  box-shadow: none;
 }
 
-.svg-filter-primary {
-  filter: invert(19%) sepia(22%) saturate(2250%) hue-rotate(174deg) brightness(95%) contrast(96%);
+.btn-outline-primary {
+  color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+  height: 2rem;
+}
+.btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+  box-shadow: none;
 }
 
-.svg-filter-secondary {
-  filter: invert(49%) sepia(10%) saturate(1619%) hue-rotate(112deg) brightness(94%) contrast(89%);
+.feed-filter-hint-container {
+  height: 2rem;
 }
 
-.svg-filter-tertiary {
-  filter: invert(67%) sepia(27%) saturate(0%) hue-rotate(195deg) brightness(94%) contrast(91%);
+.feed-filter-outer-container {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.feed-filter-inner-container {
+  height: 3.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+input {
+  color: #133960 !important;
+}
+input:active, input:focus, input:hover {
+  border-color: #133960 !important;
+  box-shadow: none !important;
+}
+input::placeholder {
+  color: rgba(19, 57, 96, 0.7) !important;
+  font-size: 0.875rem;
+}
+
+label {
+  color: #133960;
+  font-size: 0.95rem;
+}
+
+header {
+  background: #FFFFFF;
+}
+
+.navbar-brand-container {
+  width: 7.5rem;
+}
+
+.navbar-brand-image {
+  height: 3.5rem;
+}
+
+.navbar-account-container {
+  width: 7.5rem;
+}
+
+.nav-item {
+  padding: 0 0.5rem;
+}
+
+.nav-link {
+  color: rgba(19, 57, 96, 0.7);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.nav-link:active, .nav-link:focus, .nav-link:hover {
+  color: #133960;
 }
 
 /*# sourceMappingURL=primary.css.map */
