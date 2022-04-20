@@ -16,7 +16,7 @@ import {
   isRTL,
   noop,
   typeCheckConfig
-} from './util/index'
+} from './util'
 import { DefaultAllowlist, sanitizeHtml } from './util/sanitizer'
 import Data from './dom/data'
 import EventHandler from './dom/event-handler'

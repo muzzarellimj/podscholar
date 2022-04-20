@@ -11,7 +11,7 @@
  * ------------------------------------------------------------------------
  */
 
-import { isDisabled, isVisible } from '../util/index'
+import { isDisabled, isVisible } from '../util'
 
 const NODE_TEXT = 3
 
