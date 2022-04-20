@@ -56,8 +56,76 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="feed-filter">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="feed-filter-hint-container col-1 d-flex justify-content-end align-items-center">
+							<i id="feed-filter-hint-left" class="bi bi-arrow-left"></i>
+						</div>
+
+						<div class="col-10 col-xl-8 col-xxl-6">
+							<div class="feed-filter-outer-container">
+								<div class="feed-filter-inner-container">
+									<button class="btn btn-sm btn-primary" type="button">all</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">philosophy</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">anthropology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">biology</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">computer science</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">architecture</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">public administration</button>
+									<button class="btn btn-sm btn-outline-primary" type="button">library science</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="feed-filter-hint-container col-1 d-flex justify-content-start align-items-center">
+							<i id="feed-filter-hint-right" class="bi bi-arrow-right"></i>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<script src="../asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- feed filter -->
+		<script>
+			let parent = document.querySelector('.feed-filter');
+
+			let container = parent.querySelector('.feed-filter-inner-container');
+			let hintLeft = parent.querySelector('#feed-filter-hint-left');
+			let hintRight = parent.querySelector('#feed-filter-hint-right');
+
+			hintLeft.setAttribute('class', 'visually-hidden');
+
+			container.addEventListener('scroll', (event) => {
+				let leftOffset = event.currentTarget.scrollLeft;
+				let maximumLeftOffset = container.scrollWidth - container.clientWidth;
+
+				if (leftOffset === 0) {
+					hintLeft.setAttribute('class', 'visually-hidden');
+				} else if (leftOffset > 0 && leftOffset < maximumLeftOffset) {
+					hintLeft.setAttribute('class', 'bi bi-arrow-left');
+					hintRight.setAttribute('class', 'bi bi-arrow-right');
+				} else if (leftOffset >= maximumLeftOffset) {
+					hintRight.setAttribute('class', 'visually-hidden');
+				}
+			});
+		</script>
 	</body>
 </html>

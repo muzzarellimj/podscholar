@@ -6,6 +6,48 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+  height: 2rem;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+  box-shadow: none;
+}
+
+.btn-outline-primary {
+  color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+  height: 2rem;
+}
+.btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+  box-shadow: none;
+}
+
+.feed-filter-hint-container {
+  height: 2rem;
+}
+
+.feed-filter-outer-container {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.feed-filter-inner-container {
+  height: 3.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
 input {
   color: #133960 !important;
 }
