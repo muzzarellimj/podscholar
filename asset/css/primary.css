@@ -6,6 +6,19 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+input {
+  color: #133960 !important;
+}
+input:active, input:focus, input:hover {
+  border-color: #133960 !important;
+  box-shadow: none !important;
+}
+
+label {
+  color: #133960;
+  font-size: 0.95rem;
+}
+
 header {
   background: #FFFFFF;
 }
