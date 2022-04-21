@@ -10,7 +10,6 @@ body {
   color: #FFFFFF;
   background-color: #133960;
   border-color: #133960;
-  height: 2rem;
 }
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   color: #133960;
@@ -18,18 +17,23 @@ body {
   border-color: #133960;
   box-shadow: none;
 }
+.btn-primary.btn-sm {
+  height: 2rem;
+}
 
 .btn-outline-primary {
   color: #133960;
   background-color: transparent;
   border-color: #133960;
-  height: 2rem;
 }
 .btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover {
   color: #FFFFFF;
   background-color: #133960;
   border-color: #133960;
   box-shadow: none;
+}
+.btn-outline-primary.btn-sm {
+  height: 2rem;
 }
 
 .feed-filter-hint-container {
