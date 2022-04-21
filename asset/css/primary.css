@@ -91,6 +91,7 @@ body {
 
 .bi-play {
   font-size: 1.4rem;
+  -webkit-text-stroke: 0.25px white;
 }
 
 .bi-play-fill {
@@ -171,6 +172,21 @@ header {
 }
 .podcast-overview .podcast-overview-author-collapse-action:active, .podcast-overview .podcast-overview-author-collapse-action:focus, .podcast-overview .podcast-overview-author-collapse-action:hover {
   text-decoration: underline;
+}
+.podcast-overview .dropdown-menu {
+  color: #133960;
+  font-size: 0.9rem;
+  padding: 0;
+}
+.podcast-overview .dropdown-menu .dropdown-item {
+  padding: 0.15rem 0.5rem;
+}
+.podcast-overview .dropdown-menu .dropdown-item:active, .podcast-overview .dropdown-menu .dropdown-item:focus, .podcast-overview .dropdown-menu .dropdown-item:hover {
+  background: #133960;
+  color: #FFFFFF;
+}
+.podcast-overview .dropdown-menu .dropdown-divider {
+  margin: 0.25rem 0;
 }
 .podcast-overview .podcast-overview-author-link {
   color: #133960;
