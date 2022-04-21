@@ -97,6 +97,100 @@
 					</div>
 				</div>
 			</section>
+
+			<section id="feed-recent" class="py-4">
+				<div class="container">
+					<div class="row justify-content-center g-3">
+						<div class="col-12 col-lg-10 col-xxl-8">
+							<div class="podcast-overview card p-4">
+								<div class="row pb-4">
+									<div class="col-6 d-flex align-items-center justify-content-start">
+										<p class="podcast-overview-date text-muted">July 31, 2020</p>
+									</div>
+
+									<div class="col-6 d-flex align-items-center justify-content-end">
+										<button class="btn btn-sm btn-primary" type="button">computer science</button>
+									</div>
+								</div>
+
+								<div class="row pb-2">
+									<div class="col-12">
+										<a class="podcast-overview-title" href="#">SMIILE: Smart Module Integration for IoT Programming Logic and Environment</a>
+									</div>
+								</div>
+
+								<div class="row pb-2">
+									<div class="col-12">
+										<p class="podcast-overview-author text-muted">
+											S. Cho, T. Farber, C. Schultz,
+											<span id="podcast-overview-author-0" class="collapse">N. Caporusso, M. Song</span>
+											<a class="podcast-overview-author-collapse-action text-muted" href="#podcast-overview-author-0" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="podcast-overview-author-0">see more...</a>
+										</p>
+									</div>
+								</div>
+
+								<div class="row pb-2">
+									<div class="col-12">
+										<p class="podcast-overview-abstract m-0">
+											Internet of Things (IoT) aims to build a smart environment by using various smart devices, including servers,
+											<span id="podcast-overview-abstract-0" class="collapse">mobile devices, and sensors to enhance people's life. Understanding how to use different hardware and software components-programming languages, libraries, tools, and configuration setups-is required to build IoT applications due to the heterogeneity of IoT devices. As a result, building IoT applications can add unnecessary burdens to developers because they need to focus not only on the application logic that meets clients' requirements but also on the details of implementing and configuring the services. In this paper, we propose SMIILE, Smart Module Integration for IoT Logic and Environment, to address this issue. In this programming model, IoT developers use the SMIILE language to describe their application logic and prescribe the programming configuration. Then the SMIILE compiler analyzes the description and prescription to generate deployable configuration and source code files and the documentation necessary to guide IoT programmers in building the applications effectively. In our deployment model, IoT programmers can use SMIILE to supplement their application development process by customizing the libraries to meet their needs or incorporating the SMIILE generated code into their programming environment.</span>
+											<a class="podcast-overview-abstract-collapse-action inline-link" href="#podcast-overview-abstract-0" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="podcast-overview-abstract-0">see more...</a>
+										</p>
+									</div>
+								</div>
+
+								<div class="row pb-3">
+									<div class="col-12">
+										<a class="keyword-link text-muted pe-2" href="#">#iot</a>
+										<a class="keyword-link text-muted pe-2" href="#">#program processor</a>
+										<a class="keyword-link text-muted pe-2" href="#">#ieee</a>
+										<a class="keyword-link text-muted pe-2" href="#">#smart device</a>
+										<a class="keyword-link text-muted pe-2" href="#">#temperature sensor</a>
+									</div>
+								</div>
+
+								<div class="row align-items-center">
+									<div class="col-4 col-sm-2">
+										<a class="icon-link-hover" href="#">
+											<i class="icon-normal bi bi-heart"></i>
+											<i class="icon-hover bi bi-heart-fill"></i>
+										</a>
+
+										<span class="ps-1">311</span>
+									</div>
+
+									<div class="col-4 col-sm-2">
+										<a class="icon-link-hover" href="#">
+											<i class="icon-normal bi bi-bookmarks"></i>
+											<i class="icon-hover bi bi-bookmarks-fill"></i>
+										</a>
+
+										<span class="ps-1">94</span>
+									</div>
+
+									<div class="col-4 col-sm-2 d-flex align-items-center">
+										<a class="icon-link-hover pe-2" href="#">
+											<i class="icon-normal bi bi-play large"></i>
+											<i class="icon-hover bi bi-play-fill"></i>
+										</a>
+
+										<a class="icon-link" href="#">
+											<i class="bi bi-three-dots"></i>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 d-flex align-items-center justify-content-start justify-content-sm-end">
+										<a class="podcast-overview-author-link" href="#">Nicholas Caporusso</a>
+										<a class="podcast-overview-author-link" href="#">
+											<img class="podcast-overview-author-avatar" src="https://nku.edu/content/www/honors-college/faculty/honorsfellows/nicholas-caporusso/_jcr_content/par/columncontrol/column-2/textimage_1373803060/image.img.jpg/1249211295.jpg" alt="Nicholas Caporusso">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<script src="../asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -109,20 +203,56 @@
 			let hintLeft = parent.querySelector('#feed-filter-hint-left');
 			let hintRight = parent.querySelector('#feed-filter-hint-right');
 
-			hintLeft.setAttribute('class', 'visually-hidden');
+			hintLeft.setAttribute('class', 'bi bi-arrow-left text-muted');
 
 			container.addEventListener('scroll', (event) => {
 				let leftOffset = event.currentTarget.scrollLeft;
 				let maximumLeftOffset = container.scrollWidth - container.clientWidth;
 
 				if (leftOffset === 0) {
-					hintLeft.setAttribute('class', 'visually-hidden');
+					hintLeft.setAttribute('class', 'bi bi-arrow-left text-muted');
 				} else if (leftOffset > 0 && leftOffset < maximumLeftOffset) {
 					hintLeft.setAttribute('class', 'bi bi-arrow-left');
 					hintRight.setAttribute('class', 'bi bi-arrow-right');
 				} else if (leftOffset >= maximumLeftOffset) {
-					hintRight.setAttribute('class', 'visually-hidden');
+					hintRight.setAttribute('class', 'bi bi-arrow-right text-muted');
 				}
+			});
+		</script>
+
+		<!-- truncated author 'see more' / 'see less' responsiveness -->
+		<script>
+			let truncatedAuthorSet = document.querySelectorAll('.podcast-overview-author');
+
+			truncatedAuthorSet.forEach(element => {
+				let collapseElement = element.querySelector('.collapse');
+				let collapseAction = element.querySelector('.podcast-overview-author-collapse-action');
+
+				collapseElement.addEventListener('show.bs.collapse', () => {
+					collapseAction.innerHTML = 'see less';
+				});
+
+				collapseElement.addEventListener('hide.bs.collapse', () => {
+					collapseAction.innerHTML = 'see more...';
+				});
+			});
+		</script>
+
+		<!-- truncated abstract 'see more' / 'see less' responsiveness -->
+		<script>
+			let truncatedAbstractSet = document.querySelectorAll('.podcast-overview-abstract');
+
+			truncatedAbstractSet.forEach(element => {
+				let collapseElement = element.querySelector('.collapse');
+				let collapseAction = element.querySelector('.podcast-overview-abstract-collapse-action');
+
+				collapseElement.addEventListener('show.bs.collapse', () => {
+					collapseAction.innerText = 'see less';
+				});
+
+				collapseElement.addEventListener('hide.bs.collapse', () => {
+					collapseAction.innerText = 'see more...';
+				});
 			});
 		</script>
 	</body>

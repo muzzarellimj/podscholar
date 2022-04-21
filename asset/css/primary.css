@@ -48,6 +48,59 @@ body {
   white-space: nowrap;
 }
 
+.inline-link {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: none;
+}
+.inline-link:active, .inline-link:focus, .inline-link:hover {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: #133960 underline;
+}
+
+.keyword-link {
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.keyword-link:hover {
+  text-decoration: underline;
+}
+
+.icon-link {
+  color: #133960;
+  text-decoration: none;
+}
+.icon-link:active, .icon-link:focus, .icon-link:hover {
+  color: #133960;
+}
+
+.icon-link-hover {
+  color: #133960;
+  text-decoration: none;
+}
+.icon-link-hover:active, .icon-link-hover:focus, .icon-link-hover:hover {
+  color: #133960;
+}
+.icon-link-hover:hover .icon-normal, .icon-link-hover .icon-hover {
+  display: none;
+}
+.icon-link-hover .icon-normal, .icon-link-hover:hover .icon-hover {
+  display: inline;
+}
+
+.bi-play {
+  font-size: 1.4rem;
+}
+
+.bi-play-fill {
+  font-size: 1.4rem;
+}
+
+.bi-three-dots {
+  font-size: 0.85rem;
+}
+
 input {
   color: #133960 !important;
 }
@@ -92,6 +145,48 @@ header {
 }
 .nav-link:active, .nav-link:focus, .nav-link:hover {
   color: #133960;
+}
+
+.podcast-overview .podcast-overview-title {
+  color: #133960;
+  font-weight: 500;
+  font-size: 1.275rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-title:active, .podcast-overview .podcast-overview-title:focus, .podcast-overview .podcast-overview-title:hover {
+  text-decoration: #133960 underline;
+}
+.podcast-overview .podcast-overview-date {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.podcast-overview .podcast-overview-author {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.podcast-overview .podcast-overview-author-collapse-action {
+  font-weight: 600;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-author-collapse-action:active, .podcast-overview .podcast-overview-author-collapse-action:focus, .podcast-overview .podcast-overview-author-collapse-action:hover {
+  text-decoration: underline;
+}
+.podcast-overview .podcast-overview-author-link {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-author-link:active, .podcast-overview .podcast-overview-author-link:focus, .podcast-overview .podcast-overview-author-link:hover {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: #133960 underline;
+}
+.podcast-overview .podcast-overview-author-avatar {
+  border-radius: 50%;
+  height: 3rem;
+  margin-left: 0.75rem;
+  width: 3rem;
 }
 
 /*# sourceMappingURL=primary.css.map */
