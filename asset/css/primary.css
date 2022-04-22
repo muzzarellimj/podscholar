@@ -6,11 +6,15 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.badge.bg-primary {
+  background-color: #133960 !important;
+  font-weight: 500;
+}
+
 .btn-primary {
   color: #FFFFFF;
   background-color: #133960;
   border-color: #133960;
-  height: 2rem;
 }
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   color: #133960;
@@ -18,18 +22,54 @@ body {
   border-color: #133960;
   box-shadow: none;
 }
+.btn-primary.btn-sm {
+  height: 2rem;
+}
 
 .btn-outline-primary {
   color: #133960;
   background-color: transparent;
   border-color: #133960;
-  height: 2rem;
 }
 .btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover {
   color: #FFFFFF;
   background-color: #133960;
   border-color: #133960;
   box-shadow: none;
+}
+.btn-outline-primary.btn-sm {
+  height: 2rem;
+}
+
+.dropdown .dropdown-item {
+  border-radius: 0.3rem;
+}
+.dropdown .dropdown-item:active, .dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.curated-feed .curated-feed-category {
+  color: #133960;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.15rem 0;
+  text-transform: uppercase;
+}
+.curated-feed .curated-feed-title {
+  color: #000000;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+.curated-feed .curated-feed-description {
+  font-weight: 400;
+  margin: 0;
+  padding: 0.25rem 0 2rem 0;
+}
+.curated-feed .curated-feed-keyword {
+  font-weight: 500;
 }
 
 .feed-filter-hint-container {
@@ -46,6 +86,71 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+}
+
+.inline-link {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: none;
+}
+.inline-link:active, .inline-link:focus, .inline-link:hover {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: #133960 underline;
+}
+
+.keyword-link {
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.keyword-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #FFFFFF;
+}
+footer .inline-link {
+  font-size: 0.875rem;
+}
+footer .footer-brand-image {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.icon-link {
+  color: #133960;
+  text-decoration: none;
+}
+.icon-link:active, .icon-link:focus, .icon-link:hover {
+  color: #133960;
+}
+
+.icon-link-hover {
+  color: #133960;
+  text-decoration: none;
+}
+.icon-link-hover:active, .icon-link-hover:focus, .icon-link-hover:hover {
+  color: #133960;
+}
+.icon-link-hover:hover .icon-normal, .icon-link-hover .icon-hover {
+  display: none;
+}
+.icon-link-hover .icon-normal, .icon-link-hover:hover .icon-hover {
+  display: inline;
+}
+
+.bi-play {
+  font-size: 1.4rem;
+  -webkit-text-stroke: 0.25px white;
+}
+
+.bi-play-fill {
+  font-size: 1.4rem;
+}
+
+.bi-three-dots {
+  font-size: 0.85rem;
 }
 
 input {
@@ -79,6 +184,30 @@ header {
 
 .navbar-account-container {
   width: 7.5rem;
+}
+.navbar-account-container .navbar-account-avatar {
+  border-radius: 50%;
+  height: 3.15rem;
+  width: 3.15rem;
+}
+.navbar-account-container .navbar-account-dropdown-menu {
+  color: #000000;
+  min-width: 17.5rem;
+  padding: 0.75rem;
+}
+.navbar-account-container .navbar-account-dropdown-menu .navbar-account-dropdown-menu-avatar {
+  border-radius: 50%;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+.navbar-account-container .navbar-account-user-profile-link {
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 500;
+  text-decoration: none;
+}
+.navbar-account-container .navbar-account-user-profile-link:active, .navbar-account-container .navbar-account-user-profile-link:focus, .navbar-account-container .navbar-account-user-profile-link:hover {
+  background: rgba(19, 57, 96, 0.25);
+  color: #133960;
 }
 
 .nav-item {
@@ -222,6 +351,84 @@ section.pricing {
 
 .faq-container {
   text-align: center;
+
+}
+
+.podcast-overview .podcast-overview-title {
+  color: #133960;
+  font-weight: 500;
+  font-size: 1.275rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-title:active, .podcast-overview .podcast-overview-title:focus, .podcast-overview .podcast-overview-title:hover {
+  text-decoration: #133960 underline;
+}
+.podcast-overview .podcast-overview-date {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.podcast-overview .podcast-overview-author {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.podcast-overview .podcast-overview-author-collapse-action {
+  font-weight: 600;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-author-collapse-action:active, .podcast-overview .podcast-overview-author-collapse-action:focus, .podcast-overview .podcast-overview-author-collapse-action:hover {
+  text-decoration: underline;
+}
+.podcast-overview .dropdown-menu {
+  color: #133960;
+  font-size: 0.9rem;
+  padding: 0;
+}
+.podcast-overview .dropdown-menu .dropdown-item {
+  padding: 0.15rem 0.5rem;
+}
+.podcast-overview .dropdown-menu .dropdown-item:active, .podcast-overview .dropdown-menu .dropdown-item:focus, .podcast-overview .dropdown-menu .dropdown-item:hover {
+  background: #133960;
+  color: #FFFFFF;
+}
+.podcast-overview .dropdown-menu .dropdown-divider {
+  margin: 0.25rem 0;
+}
+.podcast-overview .podcast-overview-author-link {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: none;
+}
+.podcast-overview .podcast-overview-author-link:active, .podcast-overview .podcast-overview-author-link:focus, .podcast-overview .podcast-overview-author-link:hover {
+  color: #133960;
+  font-weight: 500;
+  text-decoration: #133960 underline;
+}
+.podcast-overview .podcast-overview-author-avatar {
+  border-radius: 50%;
+  height: 3rem;
+  margin-left: 0.75rem;
+  width: 3rem;
+}
+.podcast-overview .podcast-overview-creator-profile {
+  color: #000000;
+  line-height: 1.15rem;
+  min-width: 17.5rem;
+  padding: 0.75rem;
+}
+.podcast-overview .podcast-overview-creator-profile .podcast-overview-creator-profile-avatar {
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.podcast-overview .podcast-overview-creator-profile .podcast-overview-creator-profile-description {
+  font-size: 0.85rem;
+  line-height: 0.95rem;
+  margin: 0;
+}
+.podcast-overview .podcast-overview-creator-profile .podcast-overview-creator-profile-metric {
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=primary.css.map */
