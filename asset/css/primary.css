@@ -71,6 +71,17 @@ body {
   text-decoration: underline;
 }
 
+footer {
+  background: #FFFFFF;
+}
+footer .inline-link {
+  font-size: 0.875rem;
+}
+footer .footer-brand-image {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
 .icon-link {
   color: #133960;
   text-decoration: none;
