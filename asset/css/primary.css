@@ -6,6 +6,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.badge.bg-primary {
+  background-color: #133960 !important;
+  font-weight: 500;
+}
+
 .btn-primary {
   color: #FFFFFF;
   background-color: #133960;
@@ -41,6 +46,30 @@ body {
 }
 .dropdown .dropdown-item:active, .dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover {
   background: rgba(0, 0, 0, 0.05);
+}
+
+.curated-feed .curated-feed-category {
+  color: #133960;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.15rem 0;
+  text-transform: uppercase;
+}
+.curated-feed .curated-feed-title {
+  color: #000000;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+.curated-feed .curated-feed-description {
+  font-weight: 400;
+  margin: 0;
+  padding: 0.25rem 0 2rem 0;
+}
+.curated-feed .curated-feed-keyword {
+  font-weight: 500;
 }
 
 .feed-filter-hint-container {
