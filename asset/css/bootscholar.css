@@ -205,7 +205,7 @@ strong {
   font-weight: bolder;
 }
 
-small, .small {
+small, .small, .navbar .nav-link {
   font-size: 0.875em;
 }
 
@@ -7102,7 +7102,7 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
-.mx-auto {
+.mx-auto, .navbar .navbar-nav {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -7283,7 +7283,7 @@ textarea.form-control-lg {
   padding-left: 0 !important;
 }
 
-.px-1 {
+.px-1, .navbar .nav-item {
   padding-right: 0.25rem !important;
   padding-left: 0.25rem !important;
 }
@@ -8306,7 +8306,7 @@ textarea.form-control-lg {
     padding-left: 0.5rem !important;
   }
 
-  .px-sm-3 {
+  .px-sm-3, .navbar {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
   }
@@ -8952,7 +8952,7 @@ textarea.form-control-lg {
     padding-left: 0.25rem !important;
   }
 
-  .px-md-2 {
+  .px-md-2, .navbar .nav-item {
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
   }
@@ -9618,7 +9618,7 @@ textarea.form-control-lg {
     padding-left: 1.5rem !important;
   }
 
-  .px-lg-5 {
+  .px-lg-5, .navbar {
     padding-right: 3rem !important;
     padding-left: 3rem !important;
   }
@@ -11128,6 +11128,26 @@ body {
   body {
     font-family: "Inter var", sans-serif;
   }
+}
+
+.navbar {
+  background-color: #FFFFFF;
+}
+.navbar .navbar-brand-container {
+  width: 7.5rem;
+}
+.navbar .navbar-brand-container .navbar-brand-image {
+  height: 3.75rem;
+}
+.navbar .nav-link {
+  color: rgba(19, 57, 96, 0.75);
+  font-weight: 550;
+}
+.navbar .nav-link.active, .navbar .nav-link:active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #133960;
+}
+.navbar .navbar-user-profile-container {
+  width: 7.5rem;
 }
 
 /*# sourceMappingURL=bootscholar.css.map */

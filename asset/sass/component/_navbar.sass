@@ -1,0 +1,30 @@
+.navbar
+	@extend .px-sm-3, .px-lg-5
+
+	$end-component-width: 7.5rem
+
+	background-color: $white
+
+	.navbar-brand-container
+		width: $end-component-width
+
+		.navbar-brand-image
+			height: $end-component-width * 0.5
+
+	.navbar-nav
+		@extend .mx-auto
+
+	.nav-item
+		@extend .px-1, .px-md-2
+
+	.nav-link
+		@extend .small
+
+		color: rgba($primary, 0.75)
+		font-weight: 550
+
+		&.active, &:active, &:focus, &:hover
+			color: $primary
+
+	.navbar-user-profile-container
+		width: $end-component-width
