@@ -1,0 +1,13 @@
+/*! BootScholar - the official Bootstrap flavor of PodScholar - by Michael Muzzarelli, Robert Adams, and Jyhdel Pamonag */
+
+// BootScholar is the official PodScholar flavor of Bootstrap. Rather than importing Bootstrap and our local CSS
+// separately, the Bootstrap source SCSS is imported in our Sass file and compiled alongside it. This process enables
+// default variable override and extension of Bootstrap component properties to our components via the Sass @extend tag.
+// One notable caveat of this approach: due to the importing of Bootstrap after variable override, Bootstrap functions
+// cannot be used to assign or call variable values. This is not of great important and can safely be ignored for now.
+
+// import variable sass file
+
+@import '../vendor/bootstrap/scss/bootstrap'
+
+// import component-based sass files
