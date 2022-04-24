@@ -53,6 +53,68 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="filter">
+				<div class="container">
+					<div class="filter-row">
+						<div class="filter-col">
+							<a class="filter-icon" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter">
+								<i class="bi bi-filter-square"></i><span class="filter-icon-text">filter</span>
+							</a>
+
+							<div id="filter" class="collapse">
+								<div class="filter-collapse-row">
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">category</h6>
+
+										<label for="filter-category-field" class="visually-hidden">Enter a value to filter by category</label>
+										<input id="filter-category-field" class="filter-input" list="filter-category-option-list">
+										<datalist id="filter-category-option-list"></datalist>
+
+										<div id="filter-recommend-category-container" class="filter-recommend-container">
+											<h6 class="filter-recommend-heading">recommended:</h6>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">keyword</h6>
+
+										<label for="filter-keyword-field" class="visually-hidden">Enter a value to filter by keyword</label>
+										<input id="filter-keyword-field" class="filter-input" list="filter-keyword-option-list">
+										<datalist id="filter-keyword-option-list"></datalist>
+
+										<div id="filter-recommend-keyword-container" class="filter-recommend-container">
+											<h6 class="filter-recommend-heading">recommended:</h6>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">upload date</h6>
+
+										<div class="filter-container">
+											<a class="filter-link" href="#">Today</a>
+											<a class="filter-link" href="#">This Week</a>
+											<a class="filter-link" href="#">This Month</a>
+											<a class="filter-link" href="#">This Year</a>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">sort by</h6>
+
+										<div class="filter-container">
+											<a class="filter-link active" href="#">Upload Date</a>
+											<a class="filter-link" href="#">Listens</a>
+											<a class="filter-link" href="#">Bookmarks</a>
+											<a class="filter-link" href="#">Favorites</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<script src="../asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

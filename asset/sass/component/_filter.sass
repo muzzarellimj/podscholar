@@ -1,0 +1,83 @@
+.filter
+	.filter-row
+		@extend .row, .justify-content-center
+
+	.filter-col
+		@extend .col-12, .col-sm-10, .col-md-8, .col-xxl-6
+
+	.filter-icon
+		@extend .ps-1
+
+		color: rgba($primary, 0.75)
+		font-weight: 500
+		text-decoration: none
+
+		&[aria-expanded="true"], &:active, &:hover
+			color: $primary
+			font-weight: 700
+
+		.filter-icon-text
+			@extend .ps-2, .small
+
+			text-transform: uppercase
+
+	.collapse
+		@extend .px-1, .py-3
+
+		.filter-collapse-row
+			@extend .row, .g-4
+
+			.filter-collapse-col
+				@extend .col-12, .col-sm-6, .col-md-3
+
+				.filter-heading
+					@extend .pb-1, .border-bottom
+
+					color: $primary
+					font-size: 0.825rem
+					font-weight: 700
+					text-transform: uppercase
+
+				.filter-input
+					@extend .form-control, .form-control-sm, .my-3
+
+					&:active, &:focus, &:hover
+						border-color: $primary
+						box-shadow: none
+
+				.filter-recommend-container
+					@extend .vstack, .gap-2
+
+					.filter-recommend-heading
+						@extend .pt-1, .text-muted
+
+						font-size: 0.75rem
+						font-weight: 600
+						text-transform: uppercase
+
+					.filter-recommend-category
+						@extend .btn, .btn-sm, .btn-primary
+
+					.filter-recommend-keyword
+						@extend .text-muted, .m-0, .p-0
+
+						font-size: 0.9rem
+						text-decoration: none
+
+						&:active, &:focus, &:hover
+							text-decoration: underline
+
+				.filter-container
+					@extend .vstack, .gap-2
+
+					.filter-link
+						@extend .pt-1
+
+						color: rgba($black, 0.55)
+						font-size: 0.85rem
+						font-weight: 500
+						text-decoration: none
+						text-transform: uppercase
+
+						&.active, &:active, &:focus, &:hover
+							color: $primary
