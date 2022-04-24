@@ -657,7 +657,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .search .search-row, .filter .collapse .filter-collapse-row, .filter .filter-row {
+.row, .search .search-row, .filter .collapse .filter-collapse-row, .filter .filter-row, .feed .feed-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -666,7 +666,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, .search .search-row > *, .filter .collapse .filter-collapse-row > *, .filter .filter-row > * {
+.row > *, .search .search-row > *, .filter .collapse .filter-collapse-row > *, .filter .filter-row > *, .feed .feed-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -774,7 +774,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, .search .search-col, .filter .collapse .filter-collapse-row .filter-collapse-col, .filter .filter-col {
+.col-12, .search .search-col, .filter .collapse .filter-collapse-row .filter-collapse-col, .filter .filter-col, .feed .feed-row .feed-col {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -1186,7 +1186,7 @@ progress {
     width: 75%;
   }
 
-  .col-md-10 {
+  .col-md-10, .feed .feed-row .feed-col {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
@@ -1602,7 +1602,7 @@ progress {
     width: 58.33333333%;
   }
 
-  .col-xl-8 {
+  .col-xl-8, .feed .feed-row .feed-col {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
@@ -6948,7 +6948,7 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .search .search-row, .filter .filter-row {
+.justify-content-center, .search .search-row, .filter .filter-row, .feed .feed-row {
   justify-content: center !important;
 }
 
@@ -7064,7 +7064,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword {
+.m-0, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
   margin: 0 !important;
 }
 
@@ -7338,7 +7338,7 @@ textarea.form-control-lg {
   padding-bottom: 0.25rem !important;
 }
 
-.py-2 {
+.py-2, .feed .feed-row .feed-col .feed-type-heading {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -7353,7 +7353,7 @@ textarea.form-control-lg {
   padding-bottom: 1.5rem !important;
 }
 
-.py-5 {
+.py-5, .feed {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -7366,7 +7366,7 @@ textarea.form-control-lg {
   padding-top: 0.25rem !important;
 }
 
-.pt-2 {
+.pt-2, .feed .feed-row .feed-col .feed-description {
   padding-top: 0.5rem !important;
 }
 
@@ -7422,7 +7422,7 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.pb-4 {
+.pb-4, .feed .feed-row .feed-col .feed-description {
   padding-bottom: 1.5rem !important;
 }
 
@@ -7632,7 +7632,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-heading {
+.text-muted, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-heading, .feed .feed-row .feed-col .feed-description {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -11149,6 +11149,24 @@ body {
   body {
     font-family: "Inter var", sans-serif;
   }
+}
+
+.feed .feed-row .feed-col .feed-type-heading {
+  color: #133960;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.feed .feed-row .feed-col .feed-title {
+  color: #000000;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+.feed .feed-row .feed-col .feed-description {
+  font-weight: 400;
+  text-align: center;
 }
 
 .filter .filter-icon {
