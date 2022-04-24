@@ -11122,6 +11122,7 @@ textarea.form-control-lg {
   }
 }
 body {
+  background: #F9FAFB;
   font-family: "Inter", sans-serif;
 }
 @supports (font-variation-settings: normal) {
