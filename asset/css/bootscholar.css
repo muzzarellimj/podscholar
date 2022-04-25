@@ -7391,7 +7391,7 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.py-4, .search {
+.py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
@@ -7413,11 +7413,11 @@ textarea.form-control-lg {
   padding-top: 0.5rem !important;
 }
 
-.pt-3, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container {
+.pt-3, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container, .filter {
   padding-top: 1rem !important;
 }
 
-.pt-4, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container {
+.pt-4, .search, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container {
   padding-top: 1.5rem !important;
 }
 
