@@ -205,7 +205,7 @@ strong {
   font-weight: bolder;
 }
 
-small, .small, .search .form-control, .search .filter .collapse .filter-collapse-row .filter-collapse-col .filter-input, .filter .collapse .filter-collapse-row .filter-collapse-col .search .filter-input, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .navbar .nav-link, .filter .responsive-icon-container .filter-text {
+small, .small, .search .form-control, .search .filter .collapse .filter-collapse-row .filter-collapse-col .filter-input, .filter .collapse .filter-collapse-row .filter-collapse-col .search .filter-input, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .navbar .nav-link, footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-navigation-row .footer-navigation-col .footer-navigation-item, .filter .responsive-icon-container .filter-text {
   font-size: 0.875em;
 }
 
@@ -657,7 +657,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .search .search-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row, .podcast-preview-row, .filter .collapse .filter-collapse-row, .filter .filter-row, .feed .feed-row {
+.row, .search .search-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row, .podcast-preview-row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .filter .collapse .filter-collapse-row, .filter .filter-row, .feed .feed-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -666,7 +666,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, .search .search-row > *, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row > *, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row > *, .podcast-preview-row > *, .filter .collapse .filter-collapse-row > *, .filter .filter-row > *, .feed .feed-row > * {
+.row > *, .search .search-row > *, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row > *, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row > *, .podcast-preview-row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .filter .collapse .filter-collapse-row > *, .filter .filter-row > *, .feed .feed-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -724,7 +724,7 @@ progress {
   width: 8.33333333%;
 }
 
-.col-2, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container {
+.col-2, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container, footer .footer-social-row .footer-social-col {
   flex: 0 0 auto;
   width: 16.66666667%;
 }
@@ -734,7 +734,7 @@ progress {
   width: 25%;
 }
 
-.col-4, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container {
+.col-4, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container, footer .footer-social-row .footer-brand-col {
   flex: 0 0 auto;
   width: 33.33333333%;
 }
@@ -774,7 +774,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, .search .search-col, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-abstract-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container, .podcast-preview-row .podcast-preview-col, .filter .collapse .filter-collapse-row .filter-collapse-col, .filter .filter-col, .feed .feed-row .feed-col {
+.col-12, .search .search-col, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-abstract-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container, .podcast-preview-row .podcast-preview-col, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .filter .collapse .filter-collapse-row .filter-collapse-col, .filter .filter-col, .feed .feed-row .feed-col {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -943,7 +943,7 @@ progress {
     width: 25%;
   }
 
-  .col-sm-4 {
+  .col-sm-4, footer .footer-navigation-row .footer-navigation-col {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
@@ -1141,17 +1141,17 @@ progress {
     width: auto;
   }
 
-  .col-md-1 {
+  .col-md-1, footer .footer-social-row .footer-social-col {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
 
-  .col-md-2 {
+  .col-md-2, footer .footer-social-row .footer-brand-col {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
 
-  .col-md-3, .filter .collapse .filter-collapse-row .filter-collapse-col {
+  .col-md-3, footer .footer-navigation-row .footer-navigation-col, .filter .collapse .filter-collapse-row .filter-collapse-col {
     flex: 0 0 auto;
     width: 25%;
   }
@@ -1359,7 +1359,7 @@ progress {
     width: 8.33333333%;
   }
 
-  .col-lg-2 {
+  .col-lg-2, footer .footer-navigation-row .footer-navigation-col {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
@@ -6991,7 +6991,7 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .search .search-row, .podcast-preview-row, .filter .filter-row, .feed .feed-row {
+.justify-content-center, .search .search-row, .podcast-preview-row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .filter .filter-row, .feed .feed-row {
   justify-content: center !important;
 }
 
@@ -7015,7 +7015,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-category-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container {
+.align-items-center, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-category-container, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container, footer .footer-social-row {
   align-items: center !important;
 }
 
@@ -7107,7 +7107,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-name, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-abstract-container .podcast-preview-abstract, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
+.m-0, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-name, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-abstract-container .podcast-preview-abstract, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
   margin: 0 !important;
 }
 
@@ -7417,11 +7417,11 @@ textarea.form-control-lg {
   padding-top: 1rem !important;
 }
 
-.pt-4, .search, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container {
+.pt-4, .search, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container, footer .footer-navigation-row {
   padding-top: 1.5rem !important;
 }
 
-.pt-5 {
+.pt-5, footer .footer-copyright-row {
   padding-top: 3rem !important;
 }
 
@@ -7465,11 +7465,11 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.pb-4, .feed .feed-row .feed-col .feed-description {
+.pb-4, footer .footer-copyright-row, .feed .feed-row .feed-col .feed-description {
   padding-bottom: 1.5rem !important;
 }
 
-.pb-5 {
+.pb-5, footer .footer-navigation-row {
   padding-bottom: 3rem !important;
 }
 
@@ -7577,7 +7577,7 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, footer .footer-copyright-row .footer-copyright-col, footer .footer-social-row .footer-brand-col, footer .footer-social-row .footer-social-col, footer .footer-navigation-row .footer-navigation-col {
   text-align: center !important;
 }
 
@@ -7675,7 +7675,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-heading, .feed .feed-row .feed-col .feed-description {
+.text-muted, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-keyword, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-heading, .feed .feed-row .feed-col .feed-description {
   --bs-text-opacity: 1;
   color: #6c757d !important;
 }
@@ -11264,6 +11264,27 @@ body {
   color: #133960;
 }
 
+footer {
+  background-color: #FFFFFF;
+}
+footer .footer-navigation-row .footer-navigation-col .footer-navigation-item {
+  color: rgba(19, 57, 96, 0.75);
+  font-weight: 550;
+  text-decoration: none;
+}
+footer .footer-navigation-row .footer-navigation-col .footer-navigation-item:active, footer .footer-navigation-row .footer-navigation-col .footer-navigation-item:hover {
+  color: #133960 !important;
+}
+footer .footer-social-row .footer-social-col .footer-social-item {
+  color: rgba(19, 57, 96, 0.75);
+  font-size: 1.25rem;
+}
+footer .footer-social-row .footer-social-col .footer-social-item:active, footer .footer-social-row .footer-social-col .footer-social-item:hover {
+  color: #133960;
+}
+footer .footer-social-row .footer-brand-col .footer-brand-image {
+  height: 3.75rem;
+}
 .navbar {
   background-color: #FFFFFF;
 }
