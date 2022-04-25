@@ -58,9 +58,10 @@
 				<div class="container">
 					<div class="filter-row">
 						<div class="filter-col">
-							<a class="filter-icon" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter">
-								<i class="bi bi-filter-square"></i><span class="filter-icon-text">filter</span>
-							</a>
+							<div class="responsive-icon-container">
+								<a class="responsive-icon-outline" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter"><i class="bi bi-funnel"></i><span class="filter-text">filter</span></a>
+								<a class="responsive-icon-fill" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter"><i class="bi bi-funnel-fill"></i><span class="filter-text">filter</span></a>
+							</div>
 
 							<div id="filter" class="collapse">
 								<div class="filter-collapse-row">
@@ -121,7 +122,6 @@
 		<script src="../asset/js/front-end.js"></script>
 
 		<script>
-			// build build BUILD
 			const main = document.querySelector('main');
 
 			const recent = createFeed('recent', null, 'Here is what you missed since you last visited.');

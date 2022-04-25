@@ -205,7 +205,7 @@ strong {
   font-weight: bolder;
 }
 
-small, .small, .search .form-control, .search .filter .collapse .filter-collapse-row .filter-collapse-col .filter-input, .filter .collapse .filter-collapse-row .filter-collapse-col .search .filter-input, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .navbar .nav-link, .filter .filter-icon .filter-icon-text {
+small, .small, .search .form-control, .search .filter .collapse .filter-collapse-row .filter-collapse-col .filter-input, .filter .collapse .filter-collapse-row .filter-collapse-col .search .filter-input, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-description-container .podcast-preview-creator-dropdown-description, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-username-container .podcast-preview-creator-dropdown-username-stack .podcast-preview-creator-dropdown-username, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-keyword-container .podcast-preview-keyword, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-author-container .podcast-preview-author, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-date-container .podcast-preview-date, .navbar .nav-link, .filter .responsive-icon-container .filter-text {
   font-size: 0.875em;
 }
 
@@ -7477,11 +7477,11 @@ textarea.form-control-lg {
   padding-left: 0 !important;
 }
 
-.ps-1, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .filter .filter-icon {
+.ps-1, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-duration, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-interaction-container .podcast-preview-interaction-value, .filter .responsive-icon-container .responsive-icon-fill, .filter .responsive-icon-container .responsive-icon-outline {
   padding-left: 0.25rem !important;
 }
 
-.ps-2, .filter .filter-icon .filter-icon-text {
+.ps-2, .filter .responsive-icon-container .filter-text {
   padding-left: 0.5rem !important;
 }
 
@@ -11212,16 +11212,23 @@ body {
   text-align: center;
 }
 
-.filter .filter-icon {
+.filter .responsive-icon-container .responsive-icon-outline {
   color: rgba(19, 57, 96, 0.75);
   font-weight: 500;
   text-decoration: none;
 }
-.filter .filter-icon[aria-expanded=true], .filter .filter-icon:active, .filter .filter-icon:hover {
-  color: #133960;
-  font-weight: 700;
+.filter .responsive-icon-container .responsive-icon-outline[aria-expanded=true] {
+  display: none;
 }
-.filter .filter-icon .filter-icon-text {
+.filter .responsive-icon-container .responsive-icon-fill {
+  color: #133960;
+  font-weight: 600;
+  text-decoration: none;
+}
+.filter .responsive-icon-container .responsive-icon-fill[aria-expanded=true] {
+  display: inline;
+}
+.filter .responsive-icon-container .filter-text {
   text-transform: uppercase;
 }
 .filter .collapse .filter-collapse-row .filter-collapse-col .filter-heading {

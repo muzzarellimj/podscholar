@@ -5,18 +5,28 @@
 	.filter-col
 		@extend .col-12, .col-sm-10, .col-md-8, .col-xxl-6
 
-	.filter-icon
-		@extend .ps-1
+	.responsive-icon-container
+		.responsive-icon-outline
+			@extend .ps-1
 
-		color: rgba($primary, 0.75)
-		font-weight: 500
-		text-decoration: none
+			color: rgba($primary, 0.75)
+			font-weight: 500
+			text-decoration: none
 
-		&[aria-expanded="true"], &:active, &:hover
+			&[aria-expanded="true"]
+				display: none
+
+		.responsive-icon-fill
+			@extend .ps-1
+
 			color: $primary
-			font-weight: 700
+			font-weight: 600
+			text-decoration: none
 
-		.filter-icon-text
+			&[aria-expanded="true"]
+				display: inline
+
+		.filter-text
 			@extend .ps-2, .small
 
 			text-transform: uppercase
