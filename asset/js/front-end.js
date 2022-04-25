@@ -437,3 +437,395 @@ const category = {
 		'Transportation':			0
 	}
 }
+
+/**
+ * Create a PodScholar 'feed' element with the provided attributes.
+ *
+ * @param type			the feed type; e.g., 'recent', 'category', 'creator', etc
+ * @param title			the feed title; e.g., 'More from Computer Science', 'More from Nicholas Caporusso', etc.
+ * @param description	the feed description; e.g., 'See the most recent content published in a keyword you follow...'.
+ *
+ * @returns {HTMLDivElement}	a PodScholar 'feed' element.
+ */
+function createFeed(type, title, description) {
+	const feed = createDivElement(generateFeedId(type, title), 'feed');
+
+	feed.innerHTML += `
+		<div class="container">
+			<div class="feed-row">
+				<div class="feed-col">
+					<h6 class="feed-type-heading">${type !== undefined && type !== null ? type : ''}</h6>
+				</div>
+
+				<div class="feed-col">
+					<h1 class="feed-title">${title !== undefined && title !== null ? title : ''}</h1>
+				</div>
+
+				<div class="feed-col">
+					<p class="feed-description">${description !== undefined && description !== null ? description : ''}</p>
+				</div>
+			</div>
+			
+			<div class="podcast-preview-row"></div>
+		</div>
+	`;
+
+	return feed;
+}
+
+/**
+ * Create a PodScholar 'podcast-preview' element as an HTML string with the provided attributes.
+ *
+ * @param id	the podcast identifier.
+ *
+ * @returns {string}	a 'podcast-preview' element as an HTML string.
+ */
+function createPodcastPreview(id) {
+	const p = podcast[id];
+	const c = creator[p.id.creator];
+	const u = user[c.id.user];
+
+	const linkCategory = `search/search.html?category=${formatHyphenateLowercaseTrim(p.content.category)}`;
+	const linkCreator = `user/${u.profile.username}`;
+	const linkPodcast = `podcast/podcast.html?creator=${u.profile.username}&title=${formatHyphenateLowercaseTrim(p.publication.title)}`;
+
+	const idAbstractCollapse = `podcast-preview-abstract-collapse-${u.profile.username}-${formatHyphenateLowercaseTrim(p.publication.title)}`;
+	const idAuthorCollapse = `podcast-preview-author-collapse-${u.profile.username}-${formatHyphenateLowercaseTrim(p.publication.title)}`;
+	const idCreatorDropdown = `podcast-preview-creator-dropdown-${u.profile.username}-${formatHyphenateLowercaseTrim(p.publication.title)}`;
+	const idPlayDropdown = `podcast-preview-play-dropdown-${u.profile.username}-${formatHyphenateLowercaseTrim(p.publication.title)}`;
+
+	return `
+		<div class="podcast-preview-col">
+			<div class="podcast-preview">
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-date-container">
+						<p class="podcast-preview-date">${formatPodcastPreviewDate(p.content.date)}</p>
+					</div>
+
+					<div class="podcast-preview-category-container">
+						<a class="podcast-preview-category" href="${linkCategory}" role="button">${p.content.category.toLowerCase()}</a>
+					</div>
+				</div>
+
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-title-container">
+						<a class="podcast-preview-title" href="${linkPodcast}">${p.publication.title}</a>
+					</div>
+				</div>
+
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-author-container">
+						<p class="podcast-preview-author">${createPodcastPreviewAuthor(p.publication.author, idAuthorCollapse)}</p>
+					</div>
+				</div>
+
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-abstract-container">
+						<p class="podcast-preview-abstract">${createPodcastPreviewAbstract(p.publication.abstract, idAbstractCollapse)}</p>
+					</div>
+				</div>
+
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-keyword-container">${createPodcastPreviewKeyword(p.content.keyword)}</div>
+				</div>
+
+				<div class="podcast-preview-content-row">
+					<div class="podcast-preview-creator-container">
+						<div class="dropdown">
+							<a role="button" id="${idCreatorDropdown}" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+								<img class="podcast-preview-creator-avatar" src="${u.profile.avatar}" alt="${u.name.first} ${u.name.last}">
+							</a>
+
+							<div class="podcast-preview-creator-dropdown dropdown-menu" aria-labelledby="${idCreatorDropdown}">
+								<div class="podcast-preview-creator-dropdown-row" style="transform: rotate(0)">
+									<div class="podcast-preview-creator-dropdown-avatar-container">
+										<img class="podcast-preview-creator-dropdown-avatar" src="${u.profile.avatar}" alt="${u.name.first} ${u.name.last}">
+									</div>
+
+									<div class="podcast-preview-creator-dropdown-username-container">
+										<div class="podcast-preview-creator-dropdown-username-stack">
+											<h6 class="podcast-preview-creator-dropdown-name">${u.name.first} ${u.name.last}</h6>
+											<a class="podcast-preview-creator-dropdown-username" href="${linkCreator}">@${u.profile.username}</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="podcast-preview-creator-dropdown-row">
+									<div class="podcast-preview-creator-dropdown-description-container">
+										<p class="podcast-preview-creator-dropdown-description">${c.profile.about}</p>
+									</div>
+								</div>
+
+								<div class="podcast-preview-creator-dropdown-row">
+									<div class="podcast-preview-creator-dropdown-social-container">${createPodcastPreviewCreatorDropdownSocial(c.social)}</div>
+
+									<div class="podcast-preview-creator-dropdown-follow-container">
+										<button class="podcast-preview-creator-dropdown-follow" href="#">Following</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a class="podcast-preview-creator-link" href="${linkCreator}">${u.name.first} ${u.name.last}</a>
+					</div>
+
+					<div class="podcast-preview-interaction-container">
+						<div class="responsive-icon-container">
+							<a class="responsive-icon-outline" href="#"><i class="bi bi-heart"></i></a>
+							<a class="responsive-icon-fill" href="#"><i class="bi bi-heart-fill"></i></a>
+						</div>
+
+						<p class="podcast-preview-interaction-value">${p.metric.podcast.like.length}</p>
+					</div>
+
+					<div class="podcast-preview-interaction-container">
+						<div class="responsive-icon-container">
+							<a class="responsive-icon-outline" href="#"><i class="bi bi-bookmarks"></i></a>
+							<a class="responsive-icon-fill" href="#"><i class="bi bi-bookmarks-fill"></i></a>
+						</div>
+
+						<p class="podcast-preview-interaction-value">${p.metric.podcast.bookmark.length}</p>
+					</div>
+
+					<div class="podcast-preview-interaction-container">
+						<p class="podcast-preview-duration">14 min</p>
+					</div>
+
+					<div class="podcast-preview-interaction-container">
+						<div class="responsive-icon-container">
+							<a class="responsive-icon-outline" href="#"><i class="bi bi-play"></i></a>
+							<a class="responsive-icon-fill" href="#"><i class="bi bi-play-fill"></i></a>
+						</div>
+
+						<div class="dropdown">
+							<a id="${idPlayDropdown}" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+								<i class="bi bi-three-dots"></i>
+							</a>
+
+							<ul class="podcast-preview-play-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="${idPlayDropdown}">
+								<li><a class="dropdown-item" href="#">Add to queue</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#">Go to podcast</a></li>
+								<li><a class="dropdown-item" href="#">Go to creator</a></li>
+								<li><a class="dropdown-item" href="#">Go to category</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#">Share</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	`;
+}
+
+/**
+ * Create the inner HTML content of a responsive, collapsible 'podcast-preview-abstract' element.
+ *
+ * @param abstract	the podcast publication abstract.
+ * @param id		the generated 'id' attribute of the collapse element.
+ *
+ * @returns {string}	the 'podcast-preview-abstract' inner HTML content.
+ */
+function createPodcastPreviewAbstract(abstract, id) {
+	let content = '';
+
+	if (abstract.length <= 200) {
+		content += abstract;
+
+	} else {
+		let displayed = abstract.substring(0, 200);
+		let collapsed = abstract.substring(200);
+
+		content += `
+			${displayed}<span class="podcast-preview-abstract-collapse-ellipsis">...</span>
+			<span id="${id}" class="collapse">${collapsed}</span>
+			<a class="podcast-preview-abstract-collapse-toggle" href="#${id}" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="${id}">see more</a>
+		`;
+	}
+
+	return content;
+}
+
+/**
+ * Create the inner HTML content of a responsive, collapsible 'podcast-preview-author' element with inline mailto links
+ * for all appropriate authors.
+ *
+ * @param authors	the podcast publication author object to be parsed.
+ * @param id		the generated 'id' attribute of the collapse element.
+ *
+ * @returns {string}	the 'podcast-preview-author' inner HTML content.
+ */
+function createPodcastPreviewAuthor(authors, id) {
+	let links = [];
+
+	authors.forEach(author => {
+		if (author.email !== undefined && author.email !== null) {
+			links.push(`<a class="podcast-preview-author-link" href="mailto:${author.email}">${formatPodcastPreviewAuthor(author.name)}</a>`);
+		} else {
+			links.push(formatPodcastPreviewAuthor(author.name));
+		}
+	});
+
+	let content = '';
+
+	links.forEach((link, index) => {
+		if (links.length <= 3) {
+			if (index === links.length - 1) {
+				content += `${link}`;
+			} else {
+				content += `${link}, `;
+			}
+
+		} else {
+			if (index < 3) {
+				content += `${link}, `;
+
+			} else {
+				if (index === 3) {
+					content += `<span id="${id}" class="collapse">`;
+				}
+
+				if (index === links.length - 1) {
+					content += `${link} </span>`;
+					content += `<a class="podcast-preview-author-collapse-toggle" href="#${id}" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="${id}">see more</a>`;
+				} else {
+					content += `${link}, `;
+				}
+			}
+		}
+	});
+
+	return content;
+}
+
+/**
+ * Create the inner HTML content of the 'podcast-preview-keyword-container' element - a number of
+ * 'podcast-preview-keyword' elements.
+ *
+ * @param keywords	the podcast publication keyword set.
+ *
+ * @returns {string}	the 'podcast-preview-keyword-container' inner HTML content.
+ */
+function createPodcastPreviewKeyword(keywords) {
+	let content = '';
+
+	keywords.forEach(keyword => {
+		let link = `search/search.html?keyword=${formatHyphenateLowercaseTrim(keyword)}`;
+
+		content += `<a class="podcast-preview-keyword" href="${link}">#${keyword.toLowerCase()}</a>`;
+	});
+
+	return content;
+}
+
+/**
+ * Create the inner HTML content of the 'podcast-preview-creator-dropdown-social-container' element - a number of
+ * 'podcast-preview-creator-dropdown-social' elements.
+ *
+ * @param social	the creator social link set.
+ *
+ * @returns {string}	the 'podcast-preview-creator-dropdown-social-container' inner HTML container.
+ */
+function createPodcastPreviewCreatorDropdownSocial(social) {
+	let content = '';
+
+	if (social.googleScholar !== undefined && social.googleScholar !== null) {
+		content += `<a class="podcast-preview-creator-dropdown-social" href="${social.googleScholar}"><i class="bi bi-google"></i></a>`;
+	}
+
+	if (social.linkedin !== undefined && social.linkedin !== null) {
+		content += `<a class="podcast-preview-creator-dropdown-social" href="${social.linkedin}"><i class="bi bi-linkedin"></i></a>`;
+	}
+
+	if (social.twitter !== undefined && social.twitter !== null) {
+		content += `<a class="podcast-preview-creator-dropdown-social" href="${social.twitter}"><i class="bi bi-twitter"></i></a>`;
+	}
+
+	if (social.github !== undefined && social.github !== null) {
+		content += `<a class="podcast-preview-creator-dropdown-social" href="${social.github}"><i class="bi bi-github"></i></a>`;
+	}
+
+	return content;
+}
+
+/**
+ * Create a block-level 'div' element with the provided attributes.
+ *
+ * @param id		the 'id' attribute value.
+ * @param classes	the 'class' attribute value.
+ *
+ * @returns {HTMLDivElement}	a block-level 'div' element.
+ */
+function createDivElement(id, classes) {
+	const div = document.createElement('div');
+
+	if (id !== undefined) {
+		div.setAttribute('id', id);
+	}
+
+	if (classes !== undefined) {
+		div.setAttribute('class', classes);
+	}
+
+	return div;
+}
+
+/**
+ * Generate the unique 'id' attribute of a 'feed' component.
+ *
+ * @param type			the feed type; e.g., 'recent', 'category', 'creator', etc.
+ * @param title			the feed title; e.g., 'More from Computer Science', 'More from Nicholas Caporusso', etc.
+ *
+ * @returns {string}	the generated unique 'id' attribute.
+ */
+function generateFeedId(type, title) {
+	if (title !== undefined && title !== null) {
+		return `feed-${formatHyphenateLowercaseTrim(type)}-${formatHyphenateLowercaseTrim(title)}`;
+	}
+
+	return `feed-${formatHyphenateLowercaseTrim(type)}`;
+}
+
+/**
+ * Format the name of an author to include only the first character of the first name and the full last name, separated
+ * by a period.
+ *
+ * @param name		the author name to format.
+ *
+ * @returns {string}	the formatted author name.
+ */
+function formatPodcastPreviewAuthor(name) {
+	const [ first, last ] = name.split(' ');
+
+	return `${first.substring(0, 1)}. ${last}`;
+}
+
+/**
+ * Format a podcast publication date for universal display; e.g., 2020-04-20 becomes April 20, 2020.
+ *
+ * @param date		the podcast publication date.
+ *
+ * @returns {string}	the formatted date.
+ */
+function formatPodcastPreviewDate(date) {
+	const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+
+	let [ year, month, day ] = date.split('-');
+
+	month = months[month - 1];
+
+	return `${month} ${day}, ${year}`;
+}
+
+/**
+ * Format a string of text to hyphenate spaces, set all characters to lowercase, and trim trailing whitespace, e.g.,
+ * '  Hello World!   ' would become 'hello-world'.
+ *
+ * @param string		the string of text to format.
+ *
+ * @returns {string}	the formatted string.
+ */
+function formatHyphenateLowercaseTrim(string) {
+	return string.trimStart().trimEnd().toLowerCase().replaceAll(' ', '-');
+}
