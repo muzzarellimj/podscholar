@@ -1,0 +1,69 @@
+.curation
+	@extend .p-5
+
+	.curation-row
+		@extend .row, .justify-content-center
+
+		.curation-col
+			@extend .col-12, .col-md-10, .col-xl-8
+
+			.curation-heading
+				@extend .m-0, .py-2
+
+				color: $primary
+				font-size: 0.8rem
+				font-weight: 700
+				text-transform: uppercase
+				text-align: center
+
+			.curation-description
+				@extend .text-muted, .m-0, .pt-2, .pb-4
+
+				font-weight: 400
+				text-align: center
+
+		.curation-content-container
+			@extend .col-12, .col-md-3, .col-xxl-2
+
+			.curation-content
+				@extend .card, .p-3, .h-100
+
+				.curation-content-row
+					@extend .row, .justify-content-center
+
+					.curation-content-title-container
+						@extend .col-12
+
+						text-align: center
+
+						.curation-content-title
+							@extend .m-0, .pb-2
+
+							color: $primary
+							font-size: 0.8rem
+							font-weight: 700
+							text-transform: uppercase
+
+					.curation-content-item-container
+						@extend .col-10, .py-1
+
+						text-align: center
+
+						.curation-content-creator
+							color: rgba($primary, 0.75)
+							font-weight: 500
+							text-decoration: none
+
+							&:active, &:hover
+								color: $primary
+
+						.curation-content-category
+							@extend .btn, .btn-sm, .btn-primary, .w-100
+
+						.curation-content-keyword
+							@extend .text-muted
+
+							text-decoration: none
+
+							&:active, &:hover
+								text-decoration: underline
