@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>PodScholar | Register</title>
+
+		<link rel="shortcut icon" href="../asset/img/brand/brand-primary.svg">
+
+		<link rel="stylesheet" href="../asset/css/bootscholar.css">
+	</head>
+
+	<body>
+		<header class="border-bottom">
+			<nav class="navbar navbar-expand-md">
+				<div class="container">
+					<div class="navbar-brand-container">
+						<a class="navbar-brand" href="index.html">
+							<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
+						</a>
+					</div>
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div id="navigation" class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="faq.html">Pricing & FAQ</a></li>
+							<li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+
+						<div class="navbar-user-profile-container">
+							<a class="nav-link" href="register.html">Register<i class="bi bi-arrow-right ms-2"></i></a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="register">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10 text-center">
+						<h1 class="register-heading">Register</h1>
+					</div>
+
+					<div class="col-10 col-md-8 text-center">
+						<p class="register-description">Register an account with PodScholar to gain access to content curation, the ability to like and bookmark content, and a distinct user profile to share with the world.</p>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-center">
+					<ol class="stepper">
+						<li class="stepper-item">
+							<div class="stepper-item-content">
+								<h6 class="stepper-item-title">Register</h6>
+
+								<div id="register-stepper-0" class="collapse show">
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">First, enter an email and password to register with.</p>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<div class="form-floating">
+												<input id="register-email" class="form-control" type="email" placeholder="name@example.com">
+												<label for="register-email">Email address</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<div class="form-floating">
+												<input type="password" class="form-control" id="register-password" placeholder="password">
+												<label for="register-password">Password</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col-half">
+											<button class="btn btn-sm btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-0,#register-stepper-1" aria-expanded="true" aria-controls="register-stepper-0,register-stepper-1">Continue</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="stepper-item">
+							<div class="stepper-item-content">
+								<h6 class="stepper-item-title">Profile</h6>
+
+								<div id="register-stepper-1" class="collapse">
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">Next, provide us with your first and last name.</p>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col-half">
+											<div class="form-floating">
+												<input id="register-first-name" class="form-control" type="text" placeholder="Michael">
+												<label for="register-first-name">First Name</label>
+											</div>
+										</div>
+
+										<div class="stepper-item-col-half">
+											<div class="form-floating">
+												<input id="register-last-name" class="form-control" type="text" placeholder="Muzzarelli">
+												<label for="register-last-name">Last Name</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">Then, choose a username. It must be unique!</p>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<div class="form-floating">
+												<input id="register-username" class="form-control" type="text" placeholder="muzzarellimj">
+												<label for="register-username">Username</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">Finally, upload an avatar. This is optional.</p>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<label for="register-avatar" class="form-label visually-hidden">upload an avatar</label>
+											<input id="register-avatar" class="form-control" type="file">
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col-half">
+											<button class="btn btn-sm btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-0,#register-stepper-1" aria-expanded="true" aria-controls="register-stepper-0,register-stepper-1">Previous</button>
+										</div>
+
+										<div class="stepper-item-col-half">
+											<button class="btn btn-sm btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-1,#register-stepper-2" aria-expanded="true" aria-controls="register-stepper-1,register-stepper-2">Continue</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="stepper-item">
+							<div class="stepper-item-content">
+								<h6 class="stepper-item-title">Creator</h6>
+
+								<div id="register-stepper-2" class="collapse">
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">Question: would you also like to register as a creator?</p>
+										</div>
+									</div>
+
+									<div class="stepper-item-row">
+										<div class="stepper-item-col-half">
+											<button class="btn btn-sm btn-outline-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-2,#register-stepper-3" aria-expanded="false" aria-controls="register-stepper-2,register-stepper-3">No</button>
+										</div>
+
+										<div class="stepper-item-col-half">
+											<button class="btn btn-sm btn-outline-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-creator-item" aria-expanded="false" aria-controls="register-creator-item">Yes</button>
+										</div>
+									</div>
+
+									<div id="register-creator-item" class="collapse">
+										<div class="stepper-item-row">
+											<div class="stepper-item-col">
+												<p class="stepper-item-description">Great! First, provide us with your current affiliation.</p>
+											</div>
+										</div>
+
+										<div class="stepper-item-row">
+											<div class="stepper-item-col-half">
+												<div class="form-floating">
+													<input id="register-creator-position" class="form-control" type="text" placeholder="Assistant Professor">
+													<label for="register-creator-position">Position</label>
+												</div>
+											</div>
+
+											<div class="stepper-item-col-half">
+												<div class="form-floating">
+													<input id="register-creator-institution" class="form-control" type="text" placeholder="Northern Kentucky University">
+													<label for="register-creator-institution">Institution</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="stepper-item-row">
+											<div class="stepper-item-col">
+												<p class="stepper-item-description">Next, provide a short description about yourself.</p>
+											</div>
+										</div>
+
+										<div class="stepper-item-row">
+											<div class="stepper-item-col">
+												<div class="form-floating">
+													<textarea id="register-creator-about" class="form-control" placeholder="Provide a short description about yourself." style="height: 7.5rem"></textarea>
+													<label for="register-creator-about">About Me</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="stepper-item-row">
+											<div class="stepper-item-col-half">
+												<button class="btn btn-sm btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-1,#register-stepper-2" aria-expanded="false" aria-controls="register-stepper-1,register-stepper-2">Previous</button>
+											</div>
+
+											<div class="stepper-item-col-half">
+												<button class="btn btn-sm btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#register-stepper-2,#register-stepper-3" aria-expanded="false" aria-controls="register-stepper-2,register-stepper-3">Continue</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="stepper-item">
+							<div class="stepper-item-content">
+								<h6 class="stepper-item-title">Complete</h6>
+
+								<div id="register-stepper-3" class="collapse">
+									<div class="stepper-item-row">
+										<div class="stepper-item-col">
+											<p class="stepper-item-description">Welcome to PodScholar! You should be receiving an email with an account verification link. Feel free to take a look around, and if you have any questions, reach out!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</main>
+
+		<footer class="border-top">
+			<div class="container">
+				<div class="footer-navigation-row">
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="about.html">About</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="faq.html">Pricing & FAQ</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="#">Privacy Policy</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="contact.html">Contact</a>
+					</div>
+				</div>
+
+				<div class="footer-social-row">
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-facebook"></i></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-instagram"></i></a>
+					</div>
+
+					<div class="footer-brand-col">
+						<a href="index.html"><img class="footer-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-github"></i></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-twitter"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-copyright-row">
+					<div class="footer-copyright-col">
+						<p class="footer-copyright">&copy; Michael Muzzarelli, Jyhdel Pamonag, Robert Adams. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/front-end.js"></script>
+
+		<script>
+			// call initially...
+			setStaticDocumentMainHeight();
+
+			// ...and on each resize
+			window.addEventListener('resize', setStaticDocumentMainHeight);
+		</script>
+	</body>
+</html>
