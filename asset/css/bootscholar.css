@@ -1186,7 +1186,7 @@ progress {
     width: 75%;
   }
 
-  .col-md-10, .podcast-preview-row .podcast-preview-col, .feed .feed-row .feed-col {
+  .col-md-10, .feed .feed-row .feed-col {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
@@ -1399,7 +1399,7 @@ progress {
     width: 75%;
   }
 
-  .col-lg-10 {
+  .col-lg-10, .podcast-preview-row .podcast-preview-col {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
@@ -1602,7 +1602,7 @@ progress {
     width: 58.33333333%;
   }
 
-  .col-xl-8, .podcast-preview-row .podcast-preview-col, .feed .feed-row .feed-col {
+  .col-xl-8, .feed .feed-row .feed-col {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
@@ -1805,7 +1805,7 @@ progress {
     width: 41.66666667%;
   }
 
-  .col-xxl-6, .search .search-col, .podcast-preview-row .podcast-preview-col, .filter .filter-col {
+  .col-xxl-6, .search .search-col, .filter .filter-col {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -1815,7 +1815,7 @@ progress {
     width: 58.33333333%;
   }
 
-  .col-xxl-8 {
+  .col-xxl-8, .podcast-preview-row .podcast-preview-col {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
