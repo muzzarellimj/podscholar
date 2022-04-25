@@ -238,16 +238,6 @@ header {
   }
 }
 
-.about-illustration {
-  max-width: 100%;
-  height: auto;
-}
-@media screen and (max-width: 992px) {
-  .about-illustration {
-    max-width: 60%;
-  }
-}
-
 #about-container-div {
   text-align: left;
   color: #f8f9fa;
@@ -274,6 +264,9 @@ header {
   font-size: 40px;
   padding-left: 1rem;
   color: #438874;
+}
+.about-icon-arrow:hover {
+  color: #A6A6A6;
 }
 
 section.pricing {
@@ -337,7 +330,7 @@ section.pricing {
   margin-bottom: 1rem;
 }
 
-.pricing .text-muted, .faq .text-muted {
+.pricing .text-muted, .faq .text-muted, .tos .text-muted, .privacy .text-muted {
   opacity: 0.7;
 }
 
@@ -351,7 +344,6 @@ section.pricing {
 
 .faq-container {
   text-align: center;
-
 }
 
 .podcast-overview .podcast-overview-title {
@@ -429,6 +421,102 @@ section.pricing {
 .podcast-overview .podcast-overview-creator-profile .podcast-overview-creator-profile-metric {
   font-size: 0.8rem;
   margin: 0;
+}
+
+.contact, .sign-in {
+  padding: 7em;
+}
+
+.contact .wrapper, .sign-in .wrapper {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact .form-group, .sign-in .form-group {
+  margin-bottom: 1rem;
+}
+
+.bg-primary {
+  background: #133960 !important;
+}
+
+.bg-secondary {
+  background: #438874 !important;
+}
+
+.txt-primary {
+  color: #133960 !important;
+}
+
+.txt-secondary {
+  color: #438874 !important;
+}
+
+.txt-tertiary {
+  color: #A6A6A6 !important;
+}
+
+.tos hr {
+  border: 0;
+  border-top: 3px double #438874;
+}
+
+.about-illustration {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .about-illustration {
+    max-width: 60%;
+  }
+}
+
+.contact-illustration {
+  max-width: 100%;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 769px) {
+  .contact-illustration {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 2rem;
+  }
+}
+
+.sign-in-illustration {
+  max-height: 20rem;
+}
+
+.sign-in {
+  padding: 5em;
+}
+
+.sign-in .wrapper {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.sign-in .form-group {
+  margin-bottom: 1rem;
+}
+
+.sign-in-illiustration-container {
+  max-width: 100%;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 2rem;
+  display: flex !important;
+}
+@media screen and (max-width: 768px) {
+  .sign-in-illiustration-container {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=primary.css.map */
