@@ -11346,6 +11346,15 @@ footer .footer-social-row .footer-brand-col .footer-brand-image {
 .navbar .navbar-user-profile-container {
   width: 7.5rem;
 }
+.navbar .navbar-toggler {
+  border-color: #133960;
+}
+.navbar .navbar-toggler:active, .navbar .navbar-toggler:hover {
+  box-shadow: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(19, 57, 96, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
 .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-title-container .podcast-preview-title {
   color: #133960;
