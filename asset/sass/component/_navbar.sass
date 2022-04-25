@@ -27,7 +27,59 @@
 			color: $primary
 
 	.navbar-user-profile-container
+		@extend .d-flex, .justify-content-end
+
 		width: $end-component-width
+
+		.navbar-user-profile-avatar
+			@extend .rounded
+
+			height: 3.25rem
+			object-fit: cover
+			width: 3.25rem
+
+		.navbar-user-profile-dropdown
+			@extend .p-2
+
+			min-width: 17.5rem
+
+			.navbar-user-profile-dropdown-row
+				@extend .row, .align-items-center
+
+				.navbar-user-profile-dropdown-avatar-container
+					@extend .col-3
+
+					.navbar-user-profile-dropdown-avatar
+						@extend .rounded
+
+						height: 3.25rem
+						object-fit: cover
+						width: 3.25rem
+
+				.navbar-user-profile-dropdown-username-container
+					@extend .col-9
+
+					.navbar-user-profile-dropdown-username-stack
+						@extend .vstack, .gap-0
+
+						.navbar-user-profile-dropdown-name
+							@extend .m-0, .p-0
+
+							font-size: 0.9rem
+
+						.navbar-user-profile-dropdown-username
+							@extend .stretched-link, .small, .text-muted, .m-0, .p-0
+
+							text-decoration: none
+
+							&:active, &:hover
+								text-decoration: underline
+
+				.navbar-user-profile-item-container
+					@extend .col-12
+
+					.navbar-user-profile-item
+						@extend .dropdown-item, .rounded
 
 	.navbar-toggler
 		border-color: $primary
