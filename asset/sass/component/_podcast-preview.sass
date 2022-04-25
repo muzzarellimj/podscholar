@@ -90,7 +90,7 @@
 							text-decoration: underline
 
 				.podcast-preview-creator-container
-					@extend .col-4, .d-flex, .align-items-center, .justify-content-start, .pt-3
+					@extend .col-5, .col-sm-4, .d-flex, .align-items-center, .justify-content-start, .pt-3
 
 					.podcast-preview-creator-avatar
 						@extend .rounded
@@ -189,11 +189,6 @@
 					color: $primary
 					font-weight: 500
 
-				.podcast-preview-duration
-					@extend .small, .text-muted, .m-0, .ps-1
-
-					font-weight: 500
-
 				.podcast-preview-play-dropdown
 					@extend .p-2
 
@@ -204,3 +199,11 @@
 
 						font-size: 0.95rem
 						line-height: 1.15rem
+
+			.podcast-preview-duration-container
+				@extend .col-2, .d-none, .d-sm-flex, .align-items-center, .justify-content-start, .pt-3
+
+				.podcast-preview-duration
+					@extend .small, .text-muted, .m-0, .ps-1
+
+					font-weight: 500

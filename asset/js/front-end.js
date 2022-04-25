@@ -593,7 +593,7 @@ function createPodcastPreview(id) {
 						<p class="podcast-preview-interaction-value">${p.metric.podcast.bookmark.length}</p>
 					</div>
 
-					<div class="podcast-preview-interaction-container">
+					<div class="podcast-preview-duration-container">
 						<p class="podcast-preview-duration">14 min</p>
 					</div>
 
