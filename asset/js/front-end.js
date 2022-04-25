@@ -835,3 +835,15 @@ function formatPodcastPreviewDate(date) {
 function formatHyphenateLowercaseTrim(string) {
 	return string.trimStart().trimEnd().toLowerCase().replaceAll(' ', '-');
 }
+
+/**
+ * Calculate the height and width of the header and footer and responsively set the height of the main section.
+ */
+function setStaticDocumentMainHeight() {
+	let headerHeight = document.querySelector('header').offsetHeight;
+	let footerHeight = document.querySelector('footer').offsetHeight;
+	let windowHeight = window.innerHeight;
+	let mainHeight = windowHeight - headerHeight - footerHeight
+
+	document.querySelector('main').setAttribute('style', `height: ${mainHeight}px`)
+}
