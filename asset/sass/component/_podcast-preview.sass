@@ -1,0 +1,197 @@
+.podcast-preview-row
+	@extend .row, .justify-content-center, .g-3, .row-cols-1
+
+	.podcast-preview-col
+		@extend .col-12, .col-md-10, .col-xl-8, .col-xxl-6
+
+		.podcast-preview
+			@extend .card, .p-4
+
+			.podcast-preview-content-row
+				@extend .row
+
+				.podcast-preview-date-container
+					@extend .col-6, .d-flex, .align-items-center, .justify-content-start
+
+					.podcast-preview-date
+						@extend .small, .text-muted, .m-0, .p-0
+
+				.podcast-preview-category-container
+					@extend .col-6, .d-flex, .align-items-center, .justify-content-end
+
+					.podcast-preview-category
+						@extend .btn, .btn-sm, .btn-primary
+
+				.podcast-preview-title-container
+					@extend .col-12, .pt-4
+
+					.podcast-preview-title
+						color: $primary
+						font-weight: 500
+						font-size: 1.25rem
+						line-height: 1.15rem
+						text-decoration: none
+
+						&:active, &:hover
+							text-decoration: underline
+
+				.podcast-preview-author-container
+					@extend .col-12, .pt-2
+
+					.podcast-preview-author
+						@extend .text-muted, .small, .m-0
+
+						.podcast-preview-author-collapse-toggle
+							@extend .text-reset
+
+							font-weight: 600
+							text-decoration: none
+
+							&:active, &:hover
+								text-decoration:    underline
+
+				.podcast-preview-abstract-container
+					@extend .col-12, .pt-2
+
+					.podcast-preview-abstract
+						@extend .m-0
+
+						color: $black
+						font-size: 0.975rem
+						line-height: 1.2rem
+
+						.podcast-preview-abstract-collapse-toggle
+							@extend .text-reset
+
+							font-weight: 600
+							text-decoration: none
+
+							&:active, &:hover
+								text-decoration: underline
+
+				.podcast-preview-keyword-container
+					@extend .col-12, .pt-2
+
+					.podcast-preview-keyword
+						@extend .small, .text-muted, .pe-2
+
+						text-decoration: none
+
+						&:active, &:hover
+							text-decoration: underline
+
+				.podcast-preview-creator-container
+					@extend .col-4, .d-flex, .align-items-center, .justify-content-start, .pt-3
+
+					.podcast-preview-creator-avatar
+						@extend .rounded
+
+						height: 2.75rem
+						object-fit: cover
+						width: 2.75rem
+
+					.podcast-preview-creator-dropdown
+						@extend .p-2
+
+						min-width: 17.5rem
+
+						.podcast-preview-creator-dropdown-row
+							@extend .row, .align-items-center
+
+							.podcast-preview-creator-dropdown-avatar-container
+								@extend .col-3
+
+								.podcast-preview-creator-dropdown-avatar
+									@extend .rounded
+
+									height: 3.25rem
+									object-fit: cover
+									width: 3.25rem
+
+							.podcast-preview-creator-dropdown-username-container
+								@extend .col-9
+
+								.podcast-preview-creator-dropdown-username-stack
+									@extend .vstack, .gap-0
+
+									.podcast-preview-creator-dropdown-name
+										@extend .m-0, .p-0
+
+										font-size: 0.9rem
+
+									.podcast-preview-creator-dropdown-username
+										@extend .stretched-link, .small, .text-muted, .m-0, .p-0
+
+										text-decoration: none
+
+										&:active, &:hover
+											text-decoration: underline
+
+							.podcast-preview-creator-dropdown-description-container
+								@extend .col-12, .py-3
+
+								.podcast-preview-creator-dropdown-description
+									@extend .small, .m-0
+
+									color: $black
+									line-height: 1.15rem
+
+							.podcast-preview-creator-dropdown-social-container
+								@extend .col-6
+
+								.podcast-preview-creator-dropdown-social
+									@extend .pe-2
+
+									font-size: 1.25rem
+
+							.podcast-preview-creator-dropdown-follow-container
+								@extend .col-6, .d-flex, .justify-content-end
+
+								.podcast-preview-creator-dropdown-follow
+									@extend .btn, .btn-sm, .btn-primary
+
+					.podcast-preview-creator-link
+						@extend .ps-3, .d-lg-block, .d-none
+
+						color: $primary
+						font-size: 0.925rem
+						font-weight: 600
+						text-decoration: none
+
+						&:active, &:hover
+							text-decoration: underline
+
+			.podcast-preview-interaction-container
+				@extend .col-2, .d-flex, .align-items-center, .justify-content-start, .pt-3
+
+				.bi
+					font-size: 1.15rem
+
+					&.bi-play, &.bi-play-fill
+						font-size: 1.65rem
+						-webkit-text-stroke: 0.15px $white
+
+					&.bi-three-dots
+						font-size: 0.9rem
+
+				.podcast-preview-interaction-value
+					@extend .small, .m-0, .ps-1
+
+					color: $primary
+					font-weight: 500
+
+				.podcast-preview-duration
+					@extend .small, .text-muted, .m-0, .ps-1
+
+					font-weight: 500
+
+				.podcast-preview-play-dropdown
+					@extend .p-2
+
+					min-width: 12.5rem
+
+					.dropdown-item
+						@extend .p-1, .rounded
+
+						font-size: 0.95rem
+						line-height: 1.15rem
