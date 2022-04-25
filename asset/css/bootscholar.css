@@ -11213,6 +11213,30 @@ body {
   }
 }
 
+.btn-primary, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-follow-container .podcast-preview-creator-dropdown-follow, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-category-container .podcast-preview-category, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-category, .feed .feed-row .feed-pagination-col .feed-pagination {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+}
+.btn-primary:active, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-follow-container .podcast-preview-creator-dropdown-follow:active, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-category-container .podcast-preview-category:active, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-category:active, .feed .feed-row .feed-pagination-col .feed-pagination:active, .btn-primary:hover, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-creator-container .podcast-preview-creator-dropdown .podcast-preview-creator-dropdown-row .podcast-preview-creator-dropdown-follow-container .podcast-preview-creator-dropdown-follow:hover, .podcast-preview-row .podcast-preview-col .podcast-preview .podcast-preview-content-row .podcast-preview-category-container .podcast-preview-category:hover, .filter .collapse .filter-collapse-row .filter-collapse-col .filter-recommend-container .filter-recommend-category:hover, .feed .feed-row .feed-pagination-col .feed-pagination:hover {
+  color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+  box-shadow: none;
+}
+
+.btn-outline-primary {
+  color: #133960;
+  background-color: transparent;
+  border-color: #133960;
+}
+.btn-outline-primary:active, .btn-outline-primary:hover {
+  color: #FFFFFF;
+  background-color: #133960;
+  border-color: #133960;
+  box-shadow: none;
+}
+
 .feed .feed-row .feed-col .feed-type-heading {
   color: #133960;
   font-size: 0.8rem;
