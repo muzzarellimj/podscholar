@@ -202,12 +202,21 @@
 		<script>
 			const main = document.querySelector('main');
 
-			const recent = createFeed('recent', null, 'A glance at the most recent content published to PodScholar.');
-			recent.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000000');
-			recent.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000003');
-			recent.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000001');
+			const recentFeed = createFeed('recent', null, 'A glance at the most recent content published to PodScholar.');
+			recentFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000000');
+			recentFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000003');
+			recentFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000001');
 
-			main.append(recent);
+			const creatorFeed = createFeed('creator', 'More from Nicholas Caporusso', 'Here is the most recent content posted by a creator you follow, Nicholas Caporusso.');
+			creatorFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000002');
+
+			const categoryFeed = createFeed('category', 'More from Exercise Science', 'Here is the most recent content posted in a category you follow, Exercise Science.');
+			categoryFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000004');
+
+			const keywordFeed = createFeed('keyword', 'More from #behavior', 'Here is the most recent content posted with a keyword you follow, #behavior.');
+			keywordFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000005');
+
+			main.append(recentFeed, creatorFeed, categoryFeed, keywordFeed);
 		</script>
 	</body>
 </html>
