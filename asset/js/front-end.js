@@ -845,5 +845,5 @@ function setStaticDocumentMainHeight() {
 	let windowHeight = window.innerHeight;
 	let mainHeight = windowHeight - headerHeight - footerHeight
 
-	document.querySelector('main').setAttribute('style', `height: ${mainHeight}px`)
+	document.querySelector('main').setAttribute('style', `min-height: ${mainHeight}px`)
 }
