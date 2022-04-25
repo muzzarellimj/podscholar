@@ -467,6 +467,12 @@ function createFeed(type, title, description) {
 			</div>
 			
 			<div class="podcast-preview-row"></div>
+			
+			<div class="feed-row">
+				<div class="feed-pagination-col">
+					<button id="${generateFeedId(type, title)}" class="feed-pagination">Load More</button>
+				</div>
+			</div>
 		</div>
 	`;
 
