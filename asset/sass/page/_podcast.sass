@@ -1,0 +1,57 @@
+.podcast
+	@extend .pb-5, .px-3
+
+	.podcast-attribute-category
+		@extend .m-0, .pb-4
+
+		color: $primary
+		font-size: 1rem
+		font-weight: 700
+		text-transform: uppercase
+
+	.podcast-attribute
+		@extend .text-muted, .m-0, .p-0, .pb-1
+
+		font-size: 0.9rem
+		font-weight: 600
+
+	.podcast-attribute-value
+		@extend .m-0, .p-0
+
+		font-size: 0.95rem
+
+	.podcast-attribute-link
+		@extend .text-reset
+
+		font-weight: 500
+		text-decoration: none
+
+		&:active, &:hover
+			text-decoration:    underline
+
+	.podcast-attribute-keyword
+		@extend .text-muted, .pe-2
+
+		font-size: 0.95rem
+		text-decoration: none
+
+		&:active, &:hover
+			text-decoration: underline
+
+	.podcast-creator-avatar
+		@extend .rounded
+
+		height: 3.5rem
+		object-fit: cover
+		width: 3.5rem
+
+	.podcast-creator-link
+		@extend .ps-3, .d-lg-block, .d-none
+
+		color: $primary
+		font-size: 0.925rem
+		font-weight: 600
+		text-decoration: none
+
+		&:active, &:hover
+			text-decoration: underline
