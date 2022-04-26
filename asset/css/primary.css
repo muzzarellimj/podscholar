@@ -295,7 +295,7 @@ section.pricing {
   font-weight: 700;
 }
 
-.pricing hr, .faq hr {
+.pricing hr, .faq hr, .podcast-detail hr {
   margin: 1.5rem;
   border: 0;
   border-top: 3px double #438874;
@@ -458,6 +458,10 @@ section.pricing {
   color: #A6A6A6 !important;
 }
 
+.txt-grey {
+  color: #2f4f4f;
+}
+
 .tos hr {
   border: 0;
   border-top: 3px double #438874;
@@ -517,6 +521,26 @@ section.pricing {
   .sign-in-illiustration-container {
     display: none !important;
   }
+}
+
+.podcast-detail .wrapper {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.podcast-detail i {
+  color: #438874;
+  padding-top: 5px;
+}
+.podcast-detail i:hover {
+  color: #A6A6A6;
+}
+
+.podcast-detail img {
+  width: 15rem;
+  border-radius: 5rem;
 }
 
 /*# sourceMappingURL=primary.css.map */
