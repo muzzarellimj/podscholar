@@ -1,0 +1,52 @@
+.user
+	@extend .py-5, .px-3
+
+	.user-avatar
+		@extend .rounded
+
+		height: 4.25rem
+		object-fit: cover
+		width: 4.25rem
+
+	.user-name
+		@extend .m-0, .p-0
+
+		font-size: 1.45rem
+		font-weight: 650
+
+	.user-username
+		@extend .text-muted, .m-0
+
+	.user-author-badge
+		padding: 0.7rem 0.5rem
+		font-size: 1rem
+		font-weight: 500
+
+	.user-attribute-category
+		@extend .m-0, .pb-4
+
+		color: $primary
+		font-size: 1rem
+		font-weight: 700
+		text-transform: uppercase
+
+	.user-attribute-title
+		@extend .text-muted, .m-0, .p-0, .pb-1
+
+		font-size: 0.9rem
+		font-weight: 600
+
+	.user-attribute-value
+		@extend .m-0, .p-0
+
+		font-size: 0.95rem
+
+	.user-keyword
+
+		@extend .text-muted, .pe-2
+
+		font-size: 0.95rem
+		text-decoration: none
+
+		&:active, &:hover
+			text-decoration: underline
