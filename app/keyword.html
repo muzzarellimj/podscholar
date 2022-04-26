@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>PodScholar | Keywords</title>
+
+		<link rel="shortcut icon" href="../asset/img/brand/brand-primary.svg">
+
+		<link rel="stylesheet" href="../asset/css/bootscholar.css">
+	</head>
+
+	<body>
+		<header class="border-bottom">
+			<nav class="navbar navbar-expand-md">
+				<div class="container">
+					<div class="navbar-brand-container">
+						<a class="navbar-brand" href="index.html">
+							<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
+						</a>
+					</div>
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div id="navigation" class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="faq.html">Pricing & FAQ</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+
+						<div class="navbar-user-profile-container">
+							<div class="dropdown">
+								<a role="button" id="navbar-user-profile-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+									<img class="navbar-user-profile-avatar" src="https://i.imgur.com/iza0pJ4.jpg" alt="Michael Muzzarelli">
+								</a>
+
+								<div class="navbar-user-profile-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="navbar-user-profile-dropdown">
+									<div class="navbar-user-profile-dropdown-row" style="transform: rotate(0)">
+										<div class="navbar-user-profile-dropdown-avatar-container">
+											<img class="navbar-user-profile-dropdown-avatar" src="https://i.imgur.com/iza0pJ4.jpg" alt="Michael Muzzarelli">
+										</div>
+
+										<div class="navbar-user-profile-dropdown-username-container">
+											<div class="navbar-user-profile-dropdown-username-stack">
+												<h6 class="navbar-user-profile-dropdown-name">Michael Muzzarelli</h6>
+												<a class="navbar-user-profile-dropdown-username" href="user/user.html?muzzarellimj">@muzzarellimj</a>
+											</div>
+										</div>
+									</div>
+
+									<hr class="dropdown-divider">
+
+									<div class="navbar-user-profile-dropdown-row">
+										<div class="navbar-user-profile-item-container">
+											<a class="navbar-user-profile-item" href="#">Preferences</a>
+											<a class="navbar-user-profile-item" href="#">Sign Out</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="search">
+				<div class="container">
+					<div class="search-row">
+						<div class="search-col">
+							<label for="search-field" class="visually-hidden">Search by category, keyword, title, author, or DOI</label>
+							<input id="search-field" class="form-control" type="text" placeholder="Search by category, keyword, title, author, or DOI">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="filter-index">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<h6 class="filter-index-heading">keywords</h6>
+						</div>
+
+						<div class="col-12">
+							<h6 class="filter-index-description">A catalog of searchable keywords on our platform, and the number of podcasts that fall within them</h6>
+						</div>
+					</div>
+
+					<div id="filter-index-content" class="row py-5"></div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-top">
+			<div class="container">
+				<div class="footer-navigation-row">
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="about.html">About</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="faq.html">Pricing & FAQ</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="#">Privacy Policy</a>
+					</div>
+
+					<div class="footer-navigation-col">
+						<a class="footer-navigation-item" href="contact.html">Contact</a>
+					</div>
+				</div>
+
+				<div class="footer-social-row">
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-facebook"></i></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-instagram"></i></a>
+					</div>
+
+					<div class="footer-brand-col">
+						<a href="index.html"><img class="footer-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-github"></i></a>
+					</div>
+
+					<div class="footer-social-col">
+						<a class="footer-social-item" href="#"><i class="bi bi-twitter"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-copyright-row">
+					<div class="footer-copyright-col">
+						<p class="footer-copyright">&copy; Michael Muzzarelli, Jyhdel Pamonag, Robert Adams. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../asset/js/front-end.js"></script>
+
+		<script>
+			// call initially...
+			setStaticDocumentMainHeight();
+
+			// ...and on each resize
+			window.addEventListener('resize', setStaticDocumentMainHeight);
+		</script>
+
+		<script>
+			function generateTags(elementID) {
+
+				let tagGeneration = '';
+
+				const commonWords = ["the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"];
+
+				for(let element of commonWords) {
+
+					tagGeneration += `
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="card rounded m-2">
+								<div class="row g-0">
+									<div class="col-12 p-2 d-flex justify-content-between">
+										<a class="filter-index-keyword" href="#">#${element}</a>
+										<span class="badge bg-secondary">1200</span>
+									</div>
+								</div>
+							</div>
+						</div>`
+
+				}
+
+				document.getElementById(elementID).innerHTML += tagGeneration;
+
+			}
+
+			generateTags('filter-index-content');
+		</script>
+	</body>
+</html>
