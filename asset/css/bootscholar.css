@@ -11698,6 +11698,31 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.login {
+  padding: 5em;
+}
+.login .wrapper {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.login .form-group {
+  margin-bottom: 1rem;
+}
+.login .illustration {
+  max-width: 100%;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 2rem;
+  display: flex !important;
+}
+@media screen and (max-width: 768px) {
+  .login .illustration {
+    display: none !important;
+  }
+}
+
 .register .register-heading {
   color: #133960;
   font-size: 0.9rem;
