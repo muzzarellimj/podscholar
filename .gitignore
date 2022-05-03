@@ -11,3 +11,9 @@ node_modules/
 
 # generated via package.json
 package-lock.json
+
+# dotenv environmental variable configuration file
+**/.env
+
+# macos directory attribute file
+**/.DS_Store
