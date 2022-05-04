@@ -2,13 +2,33 @@
 
 ## Site
 
-WEB
-Home (anon, auth)
-Pricing and FAQ
-About
-Contact
-Terms and Conditions
-Privacy Policy
+### Web
+
+#### Home at `/`
+
+Site index to include a recent feed and, if authenticated, a randomly chosen creator feed, category feed, and keyword
+feed.
+
+#### Pricing and FAQ at `/faq`
+
+A single page containing both a pricing section with feature comparison and a FAQ section with commonly asked questions; 
+e.g., creator registration process, podcast upload process, etc.
+
+#### About at `/about`
+
+A static page containing the description and mission of the application.
+
+#### Contact at `/contact`
+
+A static page containing a contact form with standard fields: name, email address, topic, and message.
+
+#### Terms and Conditions at `/tac`
+
+A static page containing the terms and conditions of application use.
+
+#### Privacy Policy at `/privacy`
+
+A static page containing the user data privacy policy.
 
 ## Browse
 
