@@ -37,18 +37,18 @@ A static page containing the user data privacy policy.
 #### Browse by Category at `/browse/category`
 
 A category index listing each scientific discipline as a header with related sub-discipline as selectable options 
-beneath, each redirecting to a [primary search](#primary-search-at-searchtypevalue) wherein `:type` is `category` and
+beneath, each redirecting to a [targeted search route](#get-apisearchtypevalue) wherein `:type` is _category_ and
 `:value` is the sub-discipline.
 
 #### Browse by Creator at `/browse/creator`
 
 A creator index listing every existing creator as a selectable option that redirects to a
-[primary search](#primary-search-at-searchtypevalue) wherein `:type` is `creator` and `:value` is the selected creator.
+[targeted search route](#get-apisearchtypevalue) wherein `:type` is _creator_ and `:value` is the selected creator.
 
 #### Browse by Keyword at `/browse/keyword`
 
-A keyword index listing every existing keyword as a selectable option that redirects to a 
-[primary search](#primary-search-at-searchtypevalue) wherein `:type` is `keyword` and `:value` is the selected keyword.
+A keyword index listing every existing keyword as a selectable option that redirects to a
+[targeted search route](#get-apisearchtypevalue) wherein `:type` is _keyword_ and `:value` is the selected keyword.
 
 ### API
 
@@ -66,22 +66,62 @@ Retrieve a list of all existing keywords and the total number of podcasts belong
 
 ## Search
 
-WEB 
-Search (/search/[type]/[value] where type could be title, creator, category, keyword, or date)
+### Web
+
+#### Search at `/search/...`
+
+A page containing a podcast feed of content that matches the provided arguments, which can either be decided within the 
+[generic search route](#get-apisearchvalue) or provided directly in a [targeted search route](#get-apisearchtypevalue).
 
 ### API
 
-#### Primary Search at `/search/:type/:value`
+#### GET `/api/search/recent`
 
-API
-GET /search/recent - retrieve constant number of recent podcasts
-GET /search/recent/:count - retrieve :count most recent podcasts in no particular category
-GET /search/:value - pass through search middleware to format as /search/:type/:value
-GET /search/:value/:count - pass through search middleware to format as /search/:type/:value/:count
-GET /search/:type/:value - retrieve constant number of most recent podcasts matching parameter
-GET /search/:type/:value/:count - retrieve :count most recent podcasts matching parameter
-GET /search/:primaryType/:primaryValue/:secondaryType/:secondaryValue - retrieve constant number of most recent podcasts matching parameter
-GET /search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:count - retrieve :count most recent podcasts matching parameter
+Retrieve a configurable number of the most recent podcasts published without category, creator, or keyword limitation.
+
+#### GET `/api/search/recent/:count`
+
+Retrieve `:count` of the most recent podcasts published without category, creator, or keyword limitation.
+
+#### GET `/api/search/:value`
+
+A generic search endpoint meant to serve as a form of rerouting middleware containing a `:value` argument that will be
+parsed and redirected to `/api/search/:type/:value` wherein `:type` is the most appropriate type limit based on the 
+provided `:value`, and `:value` is an approximation of the provided `:value` to match a common search schema. For 
+example, if the endpoint `/api/search/nicholas%20caporusso` is reached, the client would be rerouted to 
+`/api/search/creator/nicholascaporusso`.
+
+#### GET `/api/search/:value/:count`
+
+A generic search endpoint meant to serve as a form of rerouting middleware containing a `:value` and `:count` argument 
+that will be parsed and redirected to `/api/search/:type/:value/:count` wherein `:type` is the most appropriate type 
+limit based on the provided `:value`, `:value` is an approximation of the provided `:value` to match a common search 
+schema, and `:count` is number of podcast content to return. For example, if the endpoint 
+`/api/search/nicholas%20caporusso/15` is reached, the client would be rerouted to 
+`/api/search/creator/nicholascaporusso/15`.
+
+#### GET `/api/search/:type/:value`
+
+Retrieve a configurable number of podcasts matching the provided `:type` and `:value` arguments. For example, 
+`/api/search/category/computer-science` would retrieve a list of published podcasts of category _computer science_.
+
+#### GET `/api/search/:type/:value/:count`
+
+Retrieve `:count` podcasts matching the provided `:type` and `:value` arguments. For example, 
+`/api/search/keyword/ieee/13` would retrieve a list of thirteen published podcasts containing the keyword _ieee_. 
+
+#### GET `/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue`
+
+Retrieve a configurable number of podcasts matching both the provided `:primaryType` and `:primaryValue` arguments and
+`:secondaryType` and `:secondaryValue` arguments. For example, `/api/search/category/computer-science/keyword/ieee`
+would retrieve a list of published podcasts of category _computer science_  <ins>and</ins> containing the keyword 
+_ieee_.
+
+#### GET `/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:count`
+
+Retrieve `:count` podcasts matching both the provided `:primaryType` and `:primaryValue` arguments and `:secondaryType` 
+and `:secondaryValue` arguments. For example, `/api/search/category/computer-science/keyword/ieee/7` would retrieve a 
+list of seven published podcasts of category _computer science_ <ins>and</ins> containing the keyword _ieee_.
 
 ## Account
 
