@@ -183,14 +183,37 @@ token and, assuming the request is successful, remove the mark of invalidation.
 
 ## Account
 
-WEB
-Creator Verify
-Account Edit
+### Web
 
-API
-GET /account - retrieve account details (usually for editing)
-PATCH /account - modify account details
-POST /auth/verify - verify creator status of an existing account
+#### Creator Verification at `/account/verify`
+
+A page containing a creator verification form which will be validated both client-side and server-side and prompt a
+[creator verification form](#post-apiaccountverify).
+
+#### Account Edit at `/account/edit/:section`
+
+A page containing tabular account sections pertaining to the general account, user or creator profile, or application
+preferences, all of which can be edited. The provided `:section` argument will dictate the section that is displayed.
+
+### API
+
+#### POST `/api/account/verify`
+
+Validate entered creator credentials internally (e.g., educational email address) and/or externally 
+(e.g., [ORCID](https://orcid.org/)). Assuming a successful validation response, insert a creator document and link it 
+to the user document.
+
+#### GET `/api/account`
+
+Retrieve a user and, should it exist, creator document via an authentication token.
+
+#### PATCH `/api/account`
+
+Update a user and, should it exist, creator document with the provided credentials.
+
+#### PATCH `/api/account/:attribute/:value`
+
+Update a user or creator document attribute with the provided `:attribute` and `:value` arguments.
 
 ## Podcast
 
