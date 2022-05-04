@@ -32,19 +32,46 @@ A static page containing the user data privacy policy.
 
 ## Browse
 
-WEB (each browse page reroutes to /search/[type]/[value] on click)
-Category (sub-category index similar to how we designed, but separated by category heading)
-Keyword
-Creator
+### Web
 
-API
-GET /category - retrieve a list of scientific disciplines and total number of related podcasts
-GET /keyword - retrieve a list of keywords and total number of related podcasts
+#### Browse by Category at `/browse/category`
+
+A category index listing each scientific discipline as a header with related sub-discipline as selectable options 
+beneath, each redirecting to a [primary search](#primary-search-at-searchtypevalue) wherein `:type` is `category` and
+`:value` is the sub-discipline.
+
+#### Browse by Creator at `/browse/creator`
+
+A creator index listing every existing creator as a selectable option that redirects to a
+[primary search](#primary-search-at-searchtypevalue) wherein `:type` is `creator` and `:value` is the selected creator.
+
+#### Browse by Keyword at `/browse/keyword`
+
+A keyword index listing every existing keyword as a selectable option that redirects to a 
+[primary search](#primary-search-at-searchtypevalue) wherein `:type` is `keyword` and `:value` is the selected keyword.
+
+### API
+
+#### GET `/api/browse/category`
+
+Retrieve a list of scientific disciplines and sub-disciplines and the total number of podcasts belonging to each.
+
+#### GET `/api/browse/creator`
+
+Retrieve a list of all existing creators and the total number of podcasts each creator has published.
+
+#### GET `/api/browse/keyword`
+
+Retrieve a list of all existing keywords and the total number of podcasts belonging to each.
 
 ## Search
 
 WEB 
 Search (/search/[type]/[value] where type could be title, creator, category, keyword, or date)
+
+### API
+
+#### Primary Search at `/search/:type/:value`
 
 API
 GET /search/recent - retrieve constant number of recent podcasts
