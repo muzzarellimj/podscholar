@@ -123,24 +123,30 @@ Retrieve `:count` podcasts matching both the provided `:primaryType` and `:prima
 and `:secondaryValue` arguments. For example, `/api/search/category/computer-science/keyword/ieee/7` would retrieve a 
 list of seven published podcasts of category _computer science_ <ins>and</ins> containing the keyword _ieee_.
 
-## Account
+## Authentication
 
 WEB
 Sign-up
 Sign-in
 Authenticate
-Creator Verify
 Recover Password
+
+API
+POST /auth/register - register a new account
+POST /auth/login - login to an existing account
+POST /auth/authenticate - verify email of an existing account
+POST /auth/verify - verify creator status of an existing account
+POST /auth/recover - recover existing account
+
+## Account
+
+WEB
+Creator Verify
 Account Edit
 
 API
 GET /account - retrieve account details (usually for editing)
 PATCH /account - modify account details
-POST /account/register - register a new account
-POST /account/login - login to an existing account
-POST /account/authenticate - verify email of an existing account
-POST /account/verify - verify creator status of an existing account
-POST /account/recover - recover existing account
 
 ## Podcast
 
