@@ -125,18 +125,61 @@ list of seven published podcasts of category _computer science_ <ins>and</ins> c
 
 ## Authentication
 
-WEB
-Sign-up
-Sign-in
-Authenticate
-Recover Password
+### Web
 
-API
-POST /auth/register - register a new account
-POST /auth/login - login to an existing account
-POST /auth/authenticate - verify email of an existing account
-POST /auth/verify - verify creator status of an existing account
-POST /auth/recover - recover existing account
+#### Register at `/register`
+
+A page containing a registration form which will be validated both client-side and server-side and prompt an 
+[account registration request](#post-apiauthregister).
+
+#### Login at `/login`
+
+A page containing a login form which will be validated both client-side and server-side and prompt a 
+[login validation request](#post-apiauthlogin).
+
+#### Authenticate at `/authenticate`
+
+A page containing the result of an [account authentication request](#post-apiauthauthenticate), either marking a 
+successful response or defining the issue(s) that occurred and how to resolve them.
+
+#### Account Recovery at `/recover`
+
+A page containing an account recovery form which will be validated both client-side and server-side and prompt an 
+[account recovery request](#get-apiauthrecover).
+
+### API
+
+#### POST `/api/auth/register`
+
+Validate entered account and profile credentials and insert a temporary user document in collection `stage`.
+
+#### POST `/api/auth/authenticate`
+
+Validate an account stored as a temporary user document in the `stage` database collection with an authentication token
+and migrate the temporary user document in collection `stage` to a permanent user document in collection `primary`. 
+Assuming this request is successful and the user document is migrated, a call to 
+[delete the temporary user document](#delete-apiauthauthenticate) is triggered.
+
+#### DELETE `/api/auth/authenticate`
+
+Following a successful [migration of a temporary user document](#post-apiauthauthenticate) in collection `stage` to a 
+permanent user document in collection `primary`, delete the temporary user document.
+
+#### POST `/api/auth/login`
+
+Validate entered account credentials against stored (and hashed) account credentials. Assuming both credentials match, 
+authenticate the user by providing a token; if credentials do not match, refuse to authenticate the user and prompt
+another attempt.
+
+#### GET `/api/auth/recover`
+
+Initiate the account recovery process, mark the account as invalid to prevent usage until the issue is resolved, and
+trigger an email to the registered email address.
+
+#### POST `/api/auth/recover`
+
+Validate an invalid account - one marked as invalid as a result of an account recovery request - with an authentication
+token and, assuming the request is successful, remove the mark of invalidation.
 
 ## Account
 
@@ -147,6 +190,7 @@ Account Edit
 API
 GET /account - retrieve account details (usually for editing)
 PATCH /account - modify account details
+POST /auth/verify - verify creator status of an existing account
 
 ## Podcast
 
