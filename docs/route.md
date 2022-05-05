@@ -5,7 +5,7 @@
 Routes pertaining to general site pages accessible via the navigation menu (excluding [browse](#browse)) and existing 
 independent of section.
 
-### WEB
+#### WEB
 
 ##### Home at `/`
 
@@ -29,7 +29,7 @@ A page containing a contact form with standard input: first and last name, email
 
 Routes pertaining to application policies - terms of use, privacy policy, etc.
 
-### WEB
+#### WEB
 
 ##### Privacy Policy at `/policy/privacy`
 
@@ -43,7 +43,7 @@ A page containing the terms of application use.
 
 Routes pertaining to the organisation and display of browsable content.
 
-### WEB
+#### WEB
 
 ##### Browse by Category at `/browse/category`
 
@@ -61,7 +61,7 @@ A creator index listing all existing creators as a selectable option that rerout
 A keyword index listing all existing keywords as a selectable option that reroutes to a
 [targeted search](#get-apisearchtypevalue) wherein `:type` is _keyword_ and `:value` is the selected keyword.
 
-### API
+#### API
 
 ##### GET `/api/browse/category`
 
@@ -79,7 +79,7 @@ Retrieve all existing keywords and the number of podcasts published beneath them
 
 Routes pertaining to the querying and filtering of podcasts.
 
-### WEB
+#### WEB
 
 ##### Search at `/search/...`
 
@@ -87,7 +87,7 @@ A page containing a feed of podcasts that match the provided arguments beneath `
 a [generic search route API call](#get-apisearchvalue) or provided explicitly within a 
 [targeted search route API call](#get-apisearchtypevalue).
 
-### API
+#### API
 
 ##### GET `/api/search/recent`
 
@@ -147,7 +147,7 @@ retrieve ten podcasts published including keyword _ieee_ and published after dat
 
 Routes pertaining to account authentication, including registration, validation, and recovery.
 
-### WEB
+#### WEB
 
 ##### Register at `/register`
 
@@ -169,7 +169,7 @@ A page containing a login form which will be validated both client-side and serv
 A page containing an account recovery form which will be validated both client-side and server-side and prompt an
 [account recovery request](#get-apiauthrecover).
 
-### API
+#### API
 
 ##### POST `/api/auth/register`
 
@@ -208,7 +208,7 @@ password with the hashed entered password.
 
 Routes pertaining to account management.
 
-### WEB
+#### WEB
 
 ##### Account Edit at `/account/edit/:section`
 
@@ -220,7 +220,7 @@ an area of the account - general account credentials, user profile, creator prof
 A page containing a post-registration creator verification form which will be validated both client-side and server-side
 and prompt a [creator verification request](#get-apiaccountverify).
 
-### API
+#### API
 
 ##### GET `/api/account`
 
@@ -259,7 +259,7 @@ of the newly verified creator to include the generated creator identification nu
 
 Routes pertaining to the viewing and management of user profiles.
 
-### WEB
+#### WEB
 
 ##### User Overview at `/user/:username`
 
@@ -267,7 +267,7 @@ A page containing a profile overview of a user, including creator profile detail
 include a username, avatar, and podcast curation. Assuming the user is also a creator, this page would also display
 position and institution, curation metrics, and published podcasts.
 
-### API
+#### API
 
 ##### GET `/api/user/:username`
 
@@ -283,7 +283,7 @@ matching `:section`, and of the user matching argument `:username`. For example,
 
 Routes pertaining to the uploading, viewing, and management of published podcasts.
 
-### WEB
+#### WEB
 
 ##### Podcast Upload at `/podcast/upload`
 
@@ -300,7 +300,7 @@ content, and curation metrics.
 A page containing a podcast edit form wherein all podcast details both displayed client-side and stored server-side can 
 be modified.
 
-### API
+#### API
 
 #### POST `/api/podcast/upload`
 
@@ -335,7 +335,7 @@ creator matching argument `:username` and replace it with a placeholder message 
 
 Routes pertaining to the curation of media content.
 
-### API
+#### API
 
 ##### PATCH `/api/curate/category/:value`
 
