@@ -215,6 +215,41 @@ Update a user and, should it exist, creator document with the provided credentia
 
 Update a user or creator document attribute with the provided `:attribute` and `:value` arguments.
 
+## User
+
+### Web
+
+#### User Overview at `/user/:username`
+
+A page containing a profile overview of a user and, if applicable, creator. A user overview should include a username,
+avatar, and curated content including subscribed categories, creators, and keywords.
+
+### API
+
+#### GET `/api/user/:username`
+
+Retrieve all public-facing user and, if applicable, creator profile content of the user matching `:username`.
+
+#### GET `/api/user/:username/attribute/:value`
+
+Retrieve a public-facing user or creator profile attribute of the user matching `:username`.
+
+#### GET `/api/user/:username/curation/bookmark`
+
+Retrieve a list of podcasts that the user matching `:username` has bookmarked.
+
+#### GET `/api/user/:username/curation/creator`
+
+Retrieve a list of creators that the user matching `:username` has followed.
+
+#### GET `/api/user/:username/curation/like`
+
+Retrieve a list of podcasts that the user matching `:username` has liked.
+
+#### PATCH `/api/user/:username/curate/follow`
+
+Follow or unfollow the creator matching `:username`.
+
 ## Podcast
 
 WEB
@@ -230,16 +265,3 @@ PATCH /podcast/:creator/:title - modify details of a podcast
 DELETE /podcast/:creator/:title - delete podcast and replace with placeholder deleted text
 PATCH /podcast/:creator/:title/interact/bookmark - bookmark or remove bookmark from podcast
 PATCH /podcast/:creator/:title/interact/like - like or remove like from podcast
-
-## User
-
-WEB
-User Detail
-
-API
-GET /user/:username -  retrieve user details
-GET /user/:username/:attribute - retrieve :attribute of user
-PATCH /user/:username/interact/follow - follow or unfollow user
-GET /user/:username/podcast/creator - retrieve all podcasts created by a user
-GET /user/:username/podcast/bookmark - retrieve all podcasts bookmarked by a user
-GET /user/:username/podcast/like - retrieve all podcasts liked by a user
