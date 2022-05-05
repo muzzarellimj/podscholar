@@ -246,10 +246,6 @@ Retrieve a list of creators that the user matching `:username` has followed.
 
 Retrieve a list of podcasts that the user matching `:username` has liked.
 
-#### PATCH `/api/user/:username/curate/follow`
-
-Follow or unfollow the creator matching `:username`.
-
 ## Podcast
 
 ### Web
@@ -294,10 +290,26 @@ Validate and modify podcast details.
 
 Delete the content of a podcast and replace with a placeholder message indicating that the podcast was removed.
 
-#### PATCH `/api/podcast/:username/:title/curate/bookmark`
+## Curation
 
-Bookmark or remove a bookmark from the podcast matching `:username` and `:title`.
+### API
 
-#### PATCH `/api/podcast/:username/:title/curate/like`
+##### PATCH `/api/curate/category/:value`
 
-Like or remove a like from the podcast matching `:username` and `:title`.
+Subscribe to or unsubscribe from the category matching argument `:value`.
+
+##### PATCH `/api/curate/creator/:username`
+
+Subscribe to or unsubscribe from the creator matching argument `:username`.
+
+##### PATCH `/api/curate/keyword/:value`
+
+Subscribe to or unsubscribe from the keyword matching argument `:value`.
+
+##### PATCH `/api/curate/podcast/bookmark/:username/:title`
+
+Bookmark or remove a bookmark from the podcast matching the creator, argument `:username`, and title, argument `:title`.
+
+##### PATCH `/api/curate/podcast/like/:username/:title`
+
+Like or remove a like from the podcast matching the creator, argument `:username`, and title, argument `:title`.
