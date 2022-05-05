@@ -252,16 +252,52 @@ Follow or unfollow the creator matching `:username`.
 
 ## Podcast
 
-WEB
-Podcast Detail
-Upload
-Edit
+### Web
 
-API
-POST /podcast - publish a podcast
-GET /podcast/:creator/:title - retrieve details of a podcast
-GET /podcast/:creator/:title/:attribute - retrieve :attribute of a podcast
-PATCH /podcast/:creator/:title - modify details of a podcast
-DELETE /podcast/:creator/:title - delete podcast and replace with placeholder deleted text
-PATCH /podcast/:creator/:title/interact/bookmark - bookmark or remove bookmark from podcast
-PATCH /podcast/:creator/:title/interact/like - like or remove like from podcast
+##### Podcast Upload at `/podcast/upload`
+
+A page containing a podcast upload form which will be validated both client-side and server-side and prompt a
+[podcast upload request](#post-apipodcastupload).
+
+##### Podcast Overview at `/podcast/:username/:title`
+
+A page containing a podcast overview including details pertaining to the podcast publication, source publication, audio 
+content itself, and curation metrics. Within this route, `:username` is that of the creator and `:title` is a 
+compression and hyphenation of the podcast title.
+
+##### Podcast Edit at `/podcast/:username/:title/edit`
+
+A page containing all podcast details in input fields to be edited.
+
+### API
+
+#### GET `/api/podcast/:username/:title`
+
+Retrieve the podcast document matching `:username`, that of the creator, and `:title`, the compressed and hyphenated
+podcast title. Within this route, a call is also made to retrieve the related user and creator documents to populate
+creator details.
+
+#### GET `/api/podcast/:username/:title/:attribute`
+
+Retrieve the attribute matching argument `:attribute` within the podcast document matching `:username`, that of the 
+creator, and `:title`, the compressed and hyphenated title.
+
+#### POST `/api/podcast/upload`
+
+Validate entered podcast details and insert a podcast document in collection `primary`.
+
+#### PATCH `/api/podcast/:username/:title`
+
+Validate and modify podcast details.
+
+#### DELETE `/api/podcast/:username/:title`
+
+Delete the content of a podcast and replace with a placeholder message indicating that the podcast was removed.
+
+#### PATCH `/api/podcast/:username/:title/curate/bookmark`
+
+Bookmark or remove a bookmark from the podcast matching `:username` and `:title`.
+
+#### PATCH `/api/podcast/:username/:title/curate/like`
+
+Like or remove a like from the podcast matching `:username` and `:title`.
