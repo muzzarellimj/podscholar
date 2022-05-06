@@ -10,11 +10,14 @@ const authWebRoute = require('./auth/auth.web.route');
 const authApiRoute = require('./auth/auth.api.route');
 const accountWebRoute = require('./account/account.web.route');
 const accountApiRoute = require('./account/account.api.route');
+const userWebRoute = require('./user/user.web.route');
+const userApiRoute = require('./user/user.api.route');
 
 router.use(siteWebRoute, policyWebRoute);
 router.use(browseWebRoute, browseApiRoute);
 router.use(searchWebRoute, searchApiRoute);
 router.use(authWebRoute, authApiRoute);
 router.use(accountWebRoute, accountApiRoute);
+router.use(userWebRoute, userApiRoute);
 
 module.exports = router;
