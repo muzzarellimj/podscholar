@@ -14,6 +14,7 @@ const userWebRoute = require('./user/user.web.route');
 const userApiRoute = require('./user/user.api.route');
 const podcastWebRoute = require('./podcast/podcast.web.route');
 const podcastApiRoute = require('./podcast/podcast.api.route');
+const curateApiRoute = require('./curate/curate.api.route');
 
 router.use(siteWebRoute, policyWebRoute);
 router.use(browseWebRoute, browseApiRoute);
@@ -22,5 +23,6 @@ router.use(authWebRoute, authApiRoute);
 router.use(accountWebRoute, accountApiRoute);
 router.use(userWebRoute, userApiRoute);
 router.use(podcastWebRoute, podcastApiRoute);
+router.use(curateApiRoute);
 
 module.exports = router;
