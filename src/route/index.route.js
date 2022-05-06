@@ -4,8 +4,11 @@ const siteWebRoute = require('./site/site.web.route');
 const policyWebRoute = require('./policy/policy.web.route');
 const browseWebRoute = require('./browse/browse.web.route');
 const browseApiRoute = require('./browse/browse.api.route');
+const searchWebRoute = require('./search/search.web.route');
+const searchApiRoute = require('./search/search.api.route');
 
 router.use(siteWebRoute, policyWebRoute);
 router.use(browseWebRoute, browseApiRoute);
+router.use(searchWebRoute, searchApiRoute);
 
 module.exports = router;
