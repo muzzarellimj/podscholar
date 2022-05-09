@@ -306,7 +306,7 @@ A page containing a podcast upload form which will be validated both client-side
 A page containing a podcast overview including details pertaining to the podcast publication, source publication, audio
 content, and curation metrics.
 
-##### Podcast Edit at `/podcast/:username/:title/:edit`
+##### Podcast Edit at `/podcast/:username/:title/edit`
 
 A page containing a podcast edit form wherein all podcast details both displayed client-side and stored server-side can 
 be modified.

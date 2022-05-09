@@ -8,10 +8,6 @@ router.patch('/api/account', (request, response) => {
 	// TODO: response: modify all user and, if applicable, creator document content
 });
 
-router.patch('/api/account/:section/:attribute/:value', (request, response) => {
-	// TODO: response: modify single attribute of a user or creator document
-});
-
 router.delete('/api/account', (request, response) => {
 	// TODO: response: delete user and, if applicable, creator document and replace with placeholder message
 });

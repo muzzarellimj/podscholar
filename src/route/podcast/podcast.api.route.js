@@ -8,16 +8,8 @@ router.get('/api/podcast/:username/:title', (request, response) => {
 	// TODO: response: all podcast overview content
 });
 
-router.get('/api/podcast/:username/:title/:attribute', (request, response) => {
-	// TODO: response: a particular podcast attribute
-});
-
 router.patch('/api/podcast/:username/:title', (request, response) => {
 	// TODO: response: modify all podcast document content
-});
-
-router.patch('/api/podcast/:username/:title/:attribute', (request, response) => {
-	// TODO: response: modify a particular podcast attribute
 });
 
 router.delete('/api/podcast/:username/:title', (request, response) => {

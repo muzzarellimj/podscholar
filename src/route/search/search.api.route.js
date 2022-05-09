@@ -34,4 +34,14 @@ router.get('/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValu
 	//  :secondaryValue
 });
 
+router.get('/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:tertiaryType/:tertiaryValue', (request, response) => {
+	// TODO: response: configurable number of podcasts matching arguments :primaryType and :primaryValue, :secondaryType
+	//  and :secondaryValue, and :tertiaryType and :tertiaryValue
+});
+
+router.get('/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:tertiaryType/:tertiaryValue/:count', (request, response) => {
+	// TODO: response: :count podcasts matching arguments :primaryType and :primaryValue, :secondaryType and
+	//  :secondaryValue, and :tertiaryType and :tertiaryValue
+});
+
 module.exports = router;
