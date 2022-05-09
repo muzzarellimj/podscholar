@@ -5,7 +5,7 @@
 Routes pertaining to general site pages accessible via the navigation menu (excluding [browse](#browse)) and existing 
 independent of section.
 
-#### WEB
+### WEB
 
 ##### Home at `/`
 
@@ -29,7 +29,7 @@ A page containing a contact form with standard input: first and last name, email
 
 Routes pertaining to application policies - terms of use, privacy policy, etc.
 
-#### WEB
+### WEB
 
 ##### Privacy Policy at `/policy/privacy`
 
@@ -43,7 +43,7 @@ A page containing the terms of application use.
 
 Routes pertaining to the organisation and display of browsable content.
 
-#### WEB
+### WEB
 
 ##### Browse by Category at `/browse/category`
 
@@ -61,7 +61,7 @@ A creator index listing all existing creators as a selectable option that rerout
 A keyword index listing all existing keywords as a selectable option that reroutes to a
 [targeted search](#get-apisearchtypevalue) wherein `:type` is _keyword_ and `:value` is the selected keyword.
 
-#### API
+### API
 
 ##### GET `/api/browse/category`
 
@@ -79,15 +79,15 @@ Retrieve all existing keywords and the number of podcasts published beneath them
 
 Routes pertaining to the querying and filtering of podcasts.
 
-#### WEB
+### WEB
 
-##### Search at `/search/...`
+##### Search at `/search/:value`
 
-A page containing a feed of podcasts that match the provided arguments beneath `...`, which can either be decided within
-a [generic search route API call](#get-apisearchvalue) or provided explicitly within a 
+A page containing a feed of podcasts that match the provided arguments within `:value`, which can either be decided 
+within a [generic search route API call](#get-apisearchvalue) or provided explicitly within a 
 [targeted search route API call](#get-apisearchtypevalue).
 
-#### API
+### API
 
 ##### GET `/api/search/recent`
 
@@ -143,11 +143,26 @@ Retrieve `:count` podcasts matching the limitations of provided arguments `:prim
 `:secondaryType` and `:secondaryValue`. For example, a call made to `/api/search/keyword/ieee/date/2020-01-01/12` would 
 retrieve ten podcasts published including keyword _ieee_ and published after date _January 1, 2020_.
 
+##### GET `/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:tertiaryType/:tertiaryValue`
+
+Retrieve a configurable number of podcasts matching the limitations of provided arguments `:primaryType` and 
+`:primaryValue`, `:secondaryType` and `:secondaryValue`, and `:tertiaryType` and `:tertiaryValue`. For example, a call
+made to `/api/search/keyword/ieee/date/2020-01-01/creator/nicholascaporusso` would retrieve a configurable number of 
+podcasts published including keyword _ieee_, published after _January 1, 2020_, and published by creator _Nicholas 
+Caporusso_.
+
+##### GET `/api/search/:primaryType/:primaryValue/:secondaryType/:secondaryValue/:tertiaryType/:tertiaryValue/:count`
+
+Retrieve `:count` podcasts matching the limitations of provided arguments `:primaryType` and `:primaryValue`, 
+`:secondaryType` and `:secondaryValue`, and `:tertiaryType` and `:tertiaryValue`. For example, a call made to 
+`/api/search/keyword/ieee/date/2020-01-01/creator/nicholascaporusso/3` would retrieve three podcasts published including 
+keyword _ieee_, published after _January 1, 2020_, and published by creator _Nicholas Caporusso_.
+
 ## Authentication
 
 Routes pertaining to account authentication, including registration, validation, and recovery.
 
-#### WEB
+### WEB
 
 ##### Register at `/register`
 
@@ -169,7 +184,7 @@ A page containing a login form which will be validated both client-side and serv
 A page containing an account recovery form which will be validated both client-side and server-side and prompt an
 [account recovery request](#get-apiauthrecover).
 
-#### API
+### API
 
 ##### POST `/api/auth/register`
 
@@ -208,7 +223,7 @@ password with the hashed entered password.
 
 Routes pertaining to account management.
 
-#### WEB
+### WEB
 
 ##### Account Edit at `/account/edit/:section`
 
@@ -220,7 +235,7 @@ an area of the account - general account credentials, user profile, creator prof
 A page containing a post-registration creator verification form which will be validated both client-side and server-side
 and prompt a [creator verification request](#get-apiaccountverify).
 
-#### API
+### API
 
 ##### GET `/api/account`
 
@@ -230,11 +245,7 @@ Retrieve the user and, if applicable, creator document content.
 
 Modify all user and, if applicable, creator document content.
 
-##### PATCH `/api/account/:section/:attribute/:value`
-
-Modify an attribute matching argument `:attribute` within a section matching argument `:section` with argument `:value`.
-
-#### DELETE `/api/account`
+##### DELETE `/api/account`
 
 Delete the content of a user and, if applicable, creator document and replace it with a placeholder message indicating 
 that the content was removed.
@@ -259,7 +270,7 @@ of the newly verified creator to include the generated creator identification nu
 
 Routes pertaining to the viewing and management of user profiles.
 
-#### WEB
+### WEB
 
 ##### User Overview at `/user/:username`
 
@@ -267,7 +278,7 @@ A page containing a profile overview of a user, including creator profile detail
 include a username, avatar, and podcast curation. Assuming the user is also a creator, this page would also display
 position and institution, curation metrics, and published podcasts.
 
-#### API
+### API
 
 ##### GET `/api/user/:username`
 
@@ -283,7 +294,7 @@ matching `:section`, and of the user matching argument `:username`. For example,
 
 Routes pertaining to the uploading, viewing, and management of published podcasts.
 
-#### WEB
+### WEB
 
 ##### Podcast Upload at `/podcast/upload`
 
@@ -300,9 +311,9 @@ content, and curation metrics.
 A page containing a podcast edit form wherein all podcast details both displayed client-side and stored server-side can 
 be modified.
 
-#### API
+### API
 
-#### POST `/api/podcast/upload`
+##### POST `/api/podcast/upload`
 
 Validate entered podcast and source publication details and insert a document in the podcast database collection.
 
@@ -311,22 +322,12 @@ Validate entered podcast and source publication details and insert a document in
 Retrieve all public-facing podcast overview content of the podcast with a title matching argument `:title` and published
 by the creator matching argument `:username`.
 
-##### GET `/api/podcast/:username/:title/:attribute`
-
-Retrieve the public-facing podcast attribute matching argument `:attribute` of the podcast with a title matching 
-argument `:title` and published by the creator matching argument `:username`.
-
-#### PATCH `/api/podcast/:username/:title`
+##### PATCH `/api/podcast/:username/:title`
 
 Modify all podcast document content of the podcast with a title matching argument `:title` and published by the creator
 matching argument `:username`.
 
-##### PATCH `/api/podcast/:username/:title/:attribute`
-
-Modify a podcast document attribute matching argument `:attribute` with argument `:value` of the podcast with a title 
-matching argument `:title` and published by the creator matching argument `:username`.
-
-#### DELETE `/api/podcast/:username/:title`
+##### DELETE `/api/podcast/:username/:title`
 
 Delete the content of a podcast document of the podcast with a title matching argument `:title` and published by the 
 creator matching argument `:username` and replace it with a placeholder message indicating that the content was removed.
@@ -335,7 +336,7 @@ creator matching argument `:username` and replace it with a placeholder message 
 
 Routes pertaining to the curation of media content.
 
-#### API
+### API
 
 ##### PATCH `/api/curate/category/:value`
 
