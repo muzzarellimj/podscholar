@@ -3,7 +3,7 @@
  *
  * Note: post-conversion, to match the 24-character limit of an ObjectId hexadecimal input value, the hexadecimal return
  * value will either be: (1) the hexadecimal string padded with '0' characters, assuming the input value length is less
- * than 12 characters; or (2) a substring of the hexadecimal string at positions (0, 23), assuming the input value
+ * than 12 characters; or (2) a substring of the hexadecimal string at positions (0, 24), assuming the input value
  * length is greater than 12 characters.
  *
  * Due to this restriction, this function should only be used in cases that the generated hexadecimal value will
@@ -20,7 +20,7 @@ function toHexadecimal(value) {
 		result += '000000000000000000000000';
 	}
 
-	return result.substring(0, 23);
+	return result.substring(0, 24);
 }
 
 module.exports = { toHexadecimal };
