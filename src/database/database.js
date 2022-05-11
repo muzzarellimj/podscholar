@@ -10,7 +10,7 @@ const client = new MongoClient(configuration.connectionString, {
 
 let connection = null;
 
-async function connect() {
+function connect() {
 	client.connect((error, client) => {
 		if (error) return console.log(error);
 
@@ -20,7 +20,7 @@ async function connect() {
 	});
 }
 
-async function disconnect() {
+function disconnect() {
 	client.close((error) => {
 		if (error) return console.log(error);
 
@@ -28,12 +28,8 @@ async function disconnect() {
 	});
 }
 
-async function get() {
-	if (connection !== null) {
-		return connection;
-	}
-
-	return connect();
+function get() {
+	return connection;
 }
 
 module.exports = { configuration, connect, disconnect, get };

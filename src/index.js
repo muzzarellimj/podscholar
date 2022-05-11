@@ -13,5 +13,5 @@ app.use(router);
 app.listen(configuration.port, async () => {
 	console.log(`PodScholar listening on port ${configuration.port}.`);
 
-	await database.connect();
+	database.connect();
 });
