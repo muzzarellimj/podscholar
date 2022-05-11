@@ -2,7 +2,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const configuration = require('../configuration/database.configuration');
 
-const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING, {
+const client = new MongoClient(configuration.connectionString, {
 	serverApi: ServerApiVersion.v1,
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
