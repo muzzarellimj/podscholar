@@ -1,5 +1,9 @@
-const { configuration, get: database } = require('../database');
+const { configuration } = require('../database');
 const { primary } = require('./connection.database.service');
+
+async function findCategory(name) {
+	return await primary(configuration.primaryCategoryCollection).findOne({name: name});
+}
 
 function insertCategory(document) {
 	primary(configuration.primaryCategoryCollection).insertOne(document, (error) => {
@@ -10,7 +14,7 @@ function insertCategory(document) {
 function insertCategories(documents) {
 	primary(configuration.primaryCategoryCollection).insertMany(documents, (error) => {
 		if (error) return console.log(error);
-	})
+	});
 }
 
-module.exports = { insertCategory, insertCategories };
+module.exports = { findCategory, insertCategory, insertCategories };
