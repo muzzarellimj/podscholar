@@ -1,0 +1,17 @@
+{
+	"openapi": "3.0.3",
+
+	"info": {
+		"title": "PodScholar - Podcast API",
+		"description": "Retrieve and manipulate podcast-specific information.",
+		"version": "0.0.1"
+	},
+
+	"servers": [
+		{
+			"url": "localhost:8080"
+		}
+	],
+
+	"paths": { }
+}
