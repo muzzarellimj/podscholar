@@ -1,5 +1,5 @@
 {
-	"openapi": "3.0.3",
+	"openapi": "3.0.0",
 
 	"info": {
 		"title": "PodScholar - Podcast API",
@@ -9,9 +9,665 @@
 
 	"servers": [
 		{
-			"url": "localhost:8080"
+			"url": "https://podscholar.com/"
 		}
 	],
 
-	"paths": { }
+	"paths": {
+		"/api/podcast/upload": {
+			"post": {
+				"description": "Publish a podcast to the PodScholar platform.",
+
+				"requestBody": {
+					"required": true,
+
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+
+								"properties": {
+									"authentication": {
+										"type": "string"
+									},
+
+									"filePath": {
+										"type": "string"
+									},
+
+									"categories": {
+										"type": "string"
+									},
+
+									"keyword": {
+										"type": "array",
+
+										"items": {
+											"type": "string"
+										}
+									},
+
+									"title": {
+										"type": "string"
+									},
+
+									"abstract": {
+										"type": "string"
+									},
+
+									"source": {
+										"type": "string"
+									},
+
+									"author": {
+										"type": "array",
+
+										"items": {
+											"type": "string"
+										}
+									},
+
+									"doi": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+
+				"responses": {
+					"201": {
+						"description": "The podcast was successfully published."
+					},
+
+					"400": {
+						"description": "The podcast could not be published due to a perceived client error.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"401": {
+						"description": "The podcast could not be published due to the client authentication status.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"429": {
+						"description": "The client has reached the request limit.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"/api/podcast/{username}/{title}": {
+			"get": {
+				"description": "Retrieve the data of an existing podcast.",
+
+				"parameters": [
+					{
+						"name": "username",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					},
+
+					{
+						"name": "title",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+
+				"responses": {
+					"200": {
+						"description": "Successfully retrieved the details of a podcast.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"id": {
+											"type": "object",
+
+											"properties": {
+												"podcast": {
+													"type": "string"
+												},
+
+												"creator": {
+													"type": "string"
+												},
+
+												"doi": {
+													"type": "string"
+												}
+											}
+										},
+
+										"publication": {
+											"type": "object",
+
+											"properties": {
+												"title": {
+													"type": "string"
+												},
+
+												"author": {
+													"type": "array",
+
+													"items": {
+														"type": "object",
+
+														"properties": {
+															"name": {
+																"type": "string"
+															},
+
+															"email": {
+																"type": "string"
+															}
+														}
+													}
+												},
+
+												"abstract": {
+													"type": "string"
+												},
+
+												"source": {
+													"type": "string"
+												},
+
+												"date": {
+													"type": "string"
+												}
+											}
+										},
+
+										"content": {
+											"type": "object",
+
+											"properties": {
+												"audio": {
+													"type": "string"
+												},
+
+												"duration": {
+													"type": "integer"
+												},
+
+												"category": {
+													"type": "string"
+												},
+
+												"keyword": {
+													"type": "array",
+
+													"items": {
+														"type": "string"
+													}
+												},
+
+												"date": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"400": {
+						"description": "The podcast could not be retrieved due to a perceived client error.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"404": {
+						"description": "No podcast with the provided arguments could be found.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"429": {
+						"description": "The client has reached the request limit.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+
+			"patch": {
+				"description": "Update the data of an existing podcast.",
+
+				"parameters": [
+					{
+						"name": "username",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					},
+
+					{
+						"name": "title",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+
+				"requestBody": {
+					"required": true,
+
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+
+								"properties": {
+									"authentication": {
+										"type": "string"
+									},
+
+									"id": {
+										"type": "object",
+
+										"properties": {
+											"podcast": {
+												"type": "string"
+											},
+
+											"creator": {
+												"type": "string"
+											},
+
+											"doi": {
+												"type": "string"
+											}
+										}
+									},
+
+									"publication": {
+										"type": "object",
+
+										"properties": {
+											"title": {
+												"type": "string"
+											},
+
+											"author": {
+												"type": "array",
+
+												"items": {
+													"type": "object",
+
+													"properties": {
+														"name": {
+															"type": "string"
+														},
+
+														"email": {
+															"type": "string"
+														}
+													}
+												}
+											},
+
+											"abstract": {
+												"type": "string"
+											},
+
+											"source": {
+												"type": "string"
+											},
+
+											"date": {
+												"type": "string"
+											}
+										}
+									},
+
+									"content": {
+										"type": "object",
+
+										"properties": {
+											"audio": {
+												"type": "string"
+											},
+
+											"duration": {
+												"type": "integer"
+											},
+
+											"category": {
+												"type": "string"
+											},
+
+											"keyword": {
+												"type": "array",
+
+												"items": {
+													"type": "string"
+												}
+											},
+
+											"date": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+
+				"responses": {
+					"200": {
+						"description": "Successfully updated a podcast."
+					},
+
+					"400": {
+						"description": "The podcast could not be updated due to a perceived client error.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"401": {
+						"description": "The podcast could not be updated due to the client authentication status.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"404": {
+						"description": "No podcast with the provided arguments could be found.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"429": {
+						"description": "The client has reached the request limit.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+
+			"delete": {
+				"description": "Delete an existing podcast and replace it with a placeholder message.",
+
+				"parameters": [
+					{
+						"name": "username",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					},
+
+					{
+						"name": "title",
+						"in": "path",
+						"required": true,
+
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+
+				"requestBody": {
+					"required": true,
+
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+
+								"properties": {
+									"authentication": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+
+				"responses": {
+					"200": {
+						"description": "The podcast was successfully deleted.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"400": {
+						"description": "The podcast could not be deleted due to a perceived client error.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"401": {
+						"description": "The podcast could not be deleted due to the client authentication status.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"404": {
+						"description": "The podcast could not be deleted due to the inability to find it; e.g., it has already been deleted.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"429": {
+						"description": "The client has reached the request limit.",
+
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
