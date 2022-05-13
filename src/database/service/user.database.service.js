@@ -6,6 +6,10 @@ async function findUserById(id) {
 	return await primary(configuration.primaryUserCollection).findOne({ _id: new ObjectId(id) });
 }
 
+async function findUserByUsername(username) {
+	return await primary(configuration.primaryUserCollection).findOne({'profile.username': username });
+}
+
 async function insertUser(user) {
 	const result = await primary(configuration.primaryUserCollection).insertOne(user);
 
@@ -21,4 +25,4 @@ async function insertUser(user) {
 	}
 }
 
-module.exports = { findUserById, insertUser };
+module.exports = { findUserById, findUserByUsername, insertUser };
