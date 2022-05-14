@@ -8,6 +8,9 @@ const router = require('./route/index.route');
 
 const app = express();
 
+app.use('/asset', express.static('asset'));
+app.set('view engine', 'mustache');
+
 app.use(router);
 
 app.listen(configuration.port, async () => {
