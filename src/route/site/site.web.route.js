@@ -34,7 +34,13 @@ router.get('/about', (request, response) => {
 });
 
 router.get('/contact', (request, response) => {
-	// TODO: response: contact page
+	const userProfileContent = (response.locals.authenticated === true) ?
+		'<a class="nav-link" href="/register">Account</a>' :
+		`<a class="nav-link" href="/register">Register<i class="bi bi-arrow-right ms-2"></i></a>`;
+
+	response.status(200).send(render('src/route/site/view/contact.html', {
+		userProfileContent: userProfileContent
+	}));
 });
 
 module.exports = router;
