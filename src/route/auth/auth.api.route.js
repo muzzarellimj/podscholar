@@ -225,7 +225,7 @@ router.post('/api/auth/login', async (request, response) => {
 
 			const accessToken = await insertToken(token);
 
-			if (validationToken != null) {
+			if (accessToken != null) {
 				response.status(201).cookie("access_token", accessToken, {
 					httpOnly: true
 				}).json({ message: 'User Created' })
