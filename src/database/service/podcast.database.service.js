@@ -19,6 +19,12 @@ async function findPodcastBySubcategory(category) {
 
 }
 
+async function findLimitedNumberOfNewestPodcasts(number) {
+	
+    return await primary(configuration.primaryPodcastCollection).find({}).limit(parseInt(number)).toArray();
+
+}
+
 async function insertPodcast(podcast) {
 	const result = await primary(configuration.primaryPodcastCollection).insertOne(podcast);
 
@@ -34,4 +40,4 @@ async function insertPodcast(podcast) {
 	}
 }
 
-module.exports = { findPodcastByTitle, findPodcastByDoi, findPodcastBySubcategory, insertPodcast }
+module.exports = { findPodcastByTitle, findPodcastByDoi, findPodcastBySubcategory, findLimitedNumberOfNewestPodcasts, insertPodcast }
