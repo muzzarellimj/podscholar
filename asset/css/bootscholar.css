@@ -664,7 +664,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .search .search-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row {
+.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .about .about-row, .search .search-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -673,7 +673,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .search .search-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > *, .feed .feed-row > * {
+.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .about .about-row > *, .search .search-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > *, .feed .feed-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -781,7 +781,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .search .search-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container, .feed .feed-row .feed-col {
+.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .about .about-row .about-col, .search .search-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container, .feed .feed-row .feed-col {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -1173,7 +1173,7 @@ progress {
     width: 41.66666667%;
   }
 
-  .col-md-6 {
+  .col-md-6, .about .about-row .about-col {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -1807,7 +1807,7 @@ progress {
     width: 33.33333333%;
   }
 
-  .col-xxl-5 {
+  .col-xxl-5, .about .about-row .about-col {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
@@ -7190,7 +7190,7 @@ textarea.form-control-lg {
   display: inline-flex !important;
 }
 
-.d-none {
+.d-none, .about .about-row .about-col .illustration {
   display: none !important;
 }
 
@@ -7543,7 +7543,7 @@ textarea.form-control-lg {
   justify-content: space-between !important;
 }
 
-.justify-content-around {
+.justify-content-around, .about .about-row {
   justify-content: space-around !important;
 }
 
@@ -7559,7 +7559,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, footer .footer-social-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row .feed-pagination-col {
+.align-items-center, footer .footer-social-row, .about .about-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row .feed-pagination-col {
   align-items: center !important;
 }
 
@@ -7651,7 +7651,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-name, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
+.m-0, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .about .about-row .about-col .about-contact-link, .about .about-row .about-col .about-text, .about .about-row .about-col .about-heading, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-name, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
   margin: 0 !important;
 }
 
@@ -7869,7 +7869,7 @@ textarea.form-control-lg {
   padding: 0.25rem !important;
 }
 
-.p-2, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown {
+.p-2, .about .about-row .about-col .about-contact-link, .about .about-row .about-col .about-text, .about .about-row .about-col .about-heading, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown {
   padding: 0.5rem !important;
 }
 
@@ -7940,7 +7940,7 @@ textarea.form-control-lg {
   padding-bottom: 1.5rem !important;
 }
 
-.py-5, .feed {
+.py-5, .about, .feed {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -9115,7 +9115,7 @@ textarea.form-control-lg {
     float: none !important;
   }
 
-  .d-md-inline {
+  .d-md-inline, .about .about-row .about-col .illustration {
     display: inline !important;
   }
 
@@ -11841,6 +11841,29 @@ textarea.form-control-lg {
 }
 .search .form-control::placeholder {
   color: rgba(19, 57, 96, 0.75);
+}
+
+.about .about-row .about-col .illustration {
+  width: 100%;
+}
+.about .about-row .about-col .about-heading {
+  color: #133960;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about .about-row .about-col .about-text {
+  font-size: 0.95rem;
+}
+.about .about-row .about-col .about-contact-link {
+  color: #133960;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.about .about-row .about-col .about-contact-link:active, .about .about-row .about-col .about-contact-link:hover {
+  text-decoration: underline;
 }
 
 .faq .pricing .card {
