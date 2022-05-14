@@ -11940,6 +11940,11 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+.policy hr {
+  border: 0;
+  border-top: 3px double #438874;
+}
+
 html, body {
   background: #F9FAFB;
   font-family: "Inter", sans-serif;
