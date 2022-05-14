@@ -24,7 +24,13 @@ router.get('/faq', (request, response) => {
 });
 
 router.get('/about', (request, response) => {
-	// TODO: response: about page
+	const userProfileContent = (response.locals.authenticated === true) ?
+		'<a class="nav-link" href="/register">Account</a>' :
+		`<a class="nav-link" href="/register">Register<i class="bi bi-arrow-right ms-2"></i></a>`;
+
+	response.status(200).send(render('src/route/site/view/about.html', {
+		userProfileContent: userProfileContent
+	}));
 });
 
 router.get('/contact', (request, response) => {
