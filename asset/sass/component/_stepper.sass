@@ -1,0 +1,51 @@
+.stepper
+	@extend .p-5, .w-75
+
+	$step-indicator-diameter: 1.5rem
+	$step-indicator-spacing: 0.25rem
+
+	.stepper-item
+		@extend .d-flex, .gap-3, .pb-5
+
+		position: relative
+
+		&:before
+			@extend .rounded-circle
+
+			background-color: $primary
+			content: ''
+			flex: 0 0 $step-indicator-diameter
+			height: $step-indicator-diameter
+
+		&:not(:last-child)
+			&:after
+				background-color: $primary
+				bottom: $step-indicator-spacing
+				content: ''
+				left: 0
+				position: absolute
+				top: $step-indicator-diameter + $step-indicator-spacing
+				transform: translateX($step-indicator-diameter / 2)
+				width: 0.1rem
+				z-index: 1
+
+		.stepper-item-content
+			@extend .w-100
+
+			.stepper-item-title
+				color: $primary
+				font-weight: 600
+				font-size: 1.15rem
+				margin: 0 0 0.85rem 0
+
+			.stepper-item-row
+				@extend .row, .py-2
+
+				.stepper-item-col
+					@extend .col-12
+
+				.stepper-item-col-half
+					@extend .col-6
+
+			.stepper-item-description
+				@extend .text-muted, .m-0

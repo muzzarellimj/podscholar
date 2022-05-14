@@ -664,7 +664,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .about .about-row, .search .search-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row {
+.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .about .about-row, .stepper .stepper-item .stepper-item-content .stepper-item-row, .search .search-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row, .feed .feed-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -673,7 +673,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .about .about-row > *, .search .search-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > *, .feed .feed-row > * {
+.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .about .about-row > *, .stepper .stepper-item .stepper-item-content .stepper-item-row > *, .search .search-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > *, .feed .feed-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -751,7 +751,7 @@ progress {
   width: 41.66666667%;
 }
 
-.col-6 {
+.col-6, .stepper .stepper-item .stepper-item-content .stepper-item-row .stepper-item-col-half {
   flex: 0 0 auto;
   width: 50%;
 }
@@ -781,7 +781,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .about .about-row .about-col, .search .search-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container, .feed .feed-row .feed-col {
+.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .about .about-row .about-col, .stepper .stepper-item .stepper-item-content .stepper-item-row .stepper-item-col, .search .search-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container, .feed .feed-row .feed-col {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -7182,7 +7182,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .navbar .navbar-user-profile-container, .feed .feed-row .feed-pagination-col {
+.d-flex, .stepper .stepper-item, .navbar .navbar-user-profile-container, .feed .feed-row .feed-pagination-col {
   display: flex !important;
 }
 
@@ -7423,11 +7423,11 @@ textarea.form-control-lg {
   width: 50% !important;
 }
 
-.w-75 {
+.w-75, .stepper {
   width: 75% !important;
 }
 
-.w-100 {
+.w-100, .stepper .stepper-item .stepper-item-content {
   width: 100% !important;
 }
 
@@ -7651,7 +7651,7 @@ textarea.form-control-lg {
   order: 6 !important;
 }
 
-.m-0, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .about .about-row .about-col .about-contact-link, .about .about-row .about-col .about-text, .about .about-row .about-col .about-heading, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-name, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
+.m-0, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .register .register-description, .register .register-heading, .about .about-row .about-col .about-contact-link, .about .about-row .about-col .about-text, .about .about-row .about-col .about-heading, .stepper .stepper-item .stepper-item-content .stepper-item-description, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-name, .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .feed-title, .feed .feed-row .feed-col .feed-type-heading {
   margin: 0 !important;
 }
 
@@ -7881,7 +7881,7 @@ textarea.form-control-lg {
   padding: 1.5rem !important;
 }
 
-.p-5 {
+.p-5, .stepper {
   padding: 3rem !important;
 }
 
@@ -7925,7 +7925,7 @@ textarea.form-control-lg {
   padding-bottom: 0.25rem !important;
 }
 
-.py-2, .feed .feed-row .feed-col .feed-type-heading {
+.py-2, .register .register-heading, .stepper .stepper-item .stepper-item-content .stepper-item-row, .feed .feed-row .feed-col .feed-type-heading {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -7940,7 +7940,7 @@ textarea.form-control-lg {
   padding-bottom: 1.5rem !important;
 }
 
-.py-5, .about, .feed {
+.py-5, .register, .about, .feed {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -7953,7 +7953,7 @@ textarea.form-control-lg {
   padding-top: 0.25rem !important;
 }
 
-.pt-2, .feed .feed-row .feed-col .feed-description {
+.pt-2, .register .register-description, .feed .feed-row .feed-col .feed-description {
   padding-top: 0.5rem !important;
 }
 
@@ -8009,11 +8009,11 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.pb-4, footer .footer-copyright-row, .feed .feed-row .feed-col .feed-description {
+.pb-4, footer .footer-copyright-row, .register .register-description, .feed .feed-row .feed-col .feed-description {
   padding-bottom: 1.5rem !important;
 }
 
-.pb-5, footer .footer-navigation-row {
+.pb-5, footer .footer-navigation-row, .stepper .stepper-item {
   padding-bottom: 3rem !important;
 }
 
@@ -8053,7 +8053,7 @@ textarea.form-control-lg {
   gap: 0.5rem !important;
 }
 
-.gap-3 {
+.gap-3, .stepper .stepper-item {
   gap: 1rem !important;
 }
 
@@ -8247,7 +8247,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .feed .feed-row .feed-col .feed-description {
+.text-muted, footer .footer-copyright-row .footer-copyright-col .footer-copyright, .register .register-description, .stepper .stepper-item .stepper-item-content .stepper-item-description, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .feed .feed-row .feed-col .feed-description {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-body-color-rgb), 0.75) !important;
 }
@@ -8415,7 +8415,7 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius-2xl) !important;
 }
 
-.rounded-circle {
+.rounded-circle, .stepper .stepper-item:before {
   border-radius: 50% !important;
 }
 
@@ -11843,6 +11843,32 @@ textarea.form-control-lg {
   color: rgba(19, 57, 96, 0.75);
 }
 
+.stepper .stepper-item {
+  position: relative;
+}
+.stepper .stepper-item:before {
+  background-color: #133960;
+  content: "";
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+}
+.stepper .stepper-item:not(:last-child):after {
+  background-color: #133960;
+  bottom: 0.25rem;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 1.75rem;
+  transform: translateX(0.75rem);
+  width: 0.1rem;
+  z-index: 1;
+}
+.stepper .stepper-item .stepper-item-content .stepper-item-title {
+  color: #133960;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 0.85rem 0;
+}
 .about .about-row .about-col .illustration {
   width: 100%;
 }
@@ -11926,7 +11952,7 @@ textarea.form-control-lg {
 .faq .pricing ul li {
   margin-bottom: 1rem;
 }
-.faq .pricing .text-muted, .faq .pricing footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .pricing .footer-copyright, .faq .pricing .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .pricing .feed-description, .faq .pricing .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .pricing .navbar-user-profile-dropdown-username, .faq .faq .text-muted, .faq .faq footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .faq .footer-copyright, .faq .faq .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .faq .feed-description, .faq .faq .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .faq .navbar-user-profile-dropdown-username, .faq .tos .text-muted, .faq .tos footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .tos .footer-copyright, .faq .tos .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .tos .feed-description, .faq .tos .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .tos .navbar-user-profile-dropdown-username, .faq .privacy .text-muted, .faq .privacy footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .privacy .footer-copyright, .faq .privacy .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .privacy .feed-description, .faq .privacy .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .privacy .navbar-user-profile-dropdown-username {
+.faq .pricing .text-muted, .faq .pricing footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .pricing .footer-copyright, .faq .pricing .register .register-description, .register .faq .pricing .register-description, .faq .pricing .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .pricing .feed-description, .faq .pricing .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .pricing .navbar-user-profile-dropdown-username, .faq .pricing .stepper .stepper-item .stepper-item-content .stepper-item-description, .stepper .stepper-item .stepper-item-content .faq .pricing .stepper-item-description, .faq .faq .text-muted, .faq .faq footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .faq .footer-copyright, .faq .faq .register .register-description, .register .faq .faq .register-description, .faq .faq .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .faq .feed-description, .faq .faq .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .faq .navbar-user-profile-dropdown-username, .faq .faq .stepper .stepper-item .stepper-item-content .stepper-item-description, .stepper .stepper-item .stepper-item-content .faq .faq .stepper-item-description, .faq .tos .text-muted, .faq .tos footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .tos .footer-copyright, .faq .tos .register .register-description, .register .faq .tos .register-description, .faq .tos .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .tos .feed-description, .faq .tos .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .tos .navbar-user-profile-dropdown-username, .faq .tos .stepper .stepper-item .stepper-item-content .stepper-item-description, .stepper .stepper-item .stepper-item-content .faq .tos .stepper-item-description, .faq .privacy .text-muted, .faq .privacy footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-copyright-row .footer-copyright-col .faq .privacy .footer-copyright, .faq .privacy .register .register-description, .register .faq .privacy .register-description, .faq .privacy .feed .feed-row .feed-col .feed-description, .feed .feed-row .feed-col .faq .privacy .feed-description, .faq .privacy .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .faq .privacy .navbar-user-profile-dropdown-username, .faq .privacy .stepper .stepper-item .stepper-item-content .stepper-item-description, .stepper .stepper-item .stepper-item-content .faq .privacy .stepper-item-description {
   opacity: 0.7;
 }
 .faq .pricing .btn, .faq .pricing .feed .feed-row .feed-pagination-col .feed-pagination, .feed .feed-row .feed-pagination-col .faq .pricing .feed-pagination {
@@ -11943,6 +11969,17 @@ textarea.form-control-lg {
 .policy hr {
   border: 0;
   border-top: 3px double #438874;
+}
+
+.register .register-heading {
+  color: #133960;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.register .register-description {
+  font-weight: 400;
+  text-align: center;
 }
 
 html, body {
