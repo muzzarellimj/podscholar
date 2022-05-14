@@ -7,6 +7,7 @@ const databaseConfiguration = {
 	primaryDatabase: 'primary',
 	primaryCategoryCollection: 'category',
 	primaryCreatorCollection: 'creator',
+	primaryKeywordCollection: 'keyword',
 	primaryPodcastCollection: 'podcast',
 	primaryUserCollection: 'user',
 

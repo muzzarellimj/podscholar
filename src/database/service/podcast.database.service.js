@@ -7,6 +7,12 @@ async function findPodcastByTitle(title) {
 
 }
 
+async function findPodcastByUsernameAndTitle(username, title) {
+	
+    return await primary(configuration.primaryPodcastCollection).findOne( { "content.creator": `${username}`, "source.title": `${title}` } );
+
+}
+
 async function findPodcastByDoi(doi) {
 	
     return await primary(configuration.primaryPodcastCollection).findOne({"source.doi": doi});
@@ -40,4 +46,4 @@ async function insertPodcast(podcast) {
 	}
 }
 
-module.exports = { findPodcastByTitle, findPodcastByDoi, findPodcastBySubcategory, findLimitedNumberOfNewestPodcasts, insertPodcast }
+module.exports = { findPodcastByTitle, findPodcastByUsernameAndTitle, findPodcastByDoi, findPodcastBySubcategory, findLimitedNumberOfNewestPodcasts, insertPodcast }
