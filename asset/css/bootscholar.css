@@ -11866,6 +11866,19 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.contact {
+  padding: 7em;
+}
+.contact .wrapper {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.contact .form-group {
+  margin-bottom: 1rem;
+}
+
 .faq .pricing .card {
   border: none;
   border-radius: 1rem;
