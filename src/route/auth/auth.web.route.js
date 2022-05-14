@@ -12,7 +12,9 @@ router.get('/authenticate', (request, response) => {
 });
 
 router.get('/login', (request, response) => {
-	// TODO: response: login form
+	response.status(200).send(render('src/route/auth/view/login.html', {
+		userProfileContent: response.locals.userProfileContent
+	}));
 });
 
 router.get('/recover', (request, response) => {
