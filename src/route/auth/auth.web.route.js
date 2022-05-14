@@ -18,7 +18,9 @@ router.get('/login', (request, response) => {
 });
 
 router.get('/recover', (request, response) => {
-	// TODO: response: account recovery
+	response.status(200).send(render('src/route/auth/view/recover.html', {
+		userProfileContent: response.locals.userProfileContent
+	}));
 });
 
 module.exports = router;
