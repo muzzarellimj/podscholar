@@ -8,7 +8,9 @@ router.get('/policy/privacy', (request, response) => {
 });
 
 router.get('/policy/use', (request, response) => {
-	// TODO: response: application use policy (terms of use)
+	response.status(200).send(render('src/route/policy/view/use.html', {
+		userProfileContent: response.locals.userProfileContent
+	}));
 });
 
 module.exports = router;
