@@ -217,7 +217,7 @@ strong {
   font-weight: bolder;
 }
 
-small, .small, footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-navigation-row .footer-navigation-col .footer-navigation-item, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .nav-link {
+small, .small, footer .footer-copyright-row .footer-copyright-col .footer-copyright, footer .footer-navigation-row .footer-navigation-col .footer-navigation-item, .search .form-control, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-dropdown-username-container .navbar-user-profile-dropdown-username-stack .navbar-user-profile-dropdown-username, .navbar .nav-link {
   font-size: 0.875em;
 }
 
@@ -664,7 +664,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row {
+.row, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .search .search-row, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -673,7 +673,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > * {
+.row > *, footer .footer-copyright-row > *, footer .footer-social-row > *, footer .footer-navigation-row > *, .search .search-row > *, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -781,7 +781,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container {
+.col-12, footer .footer-copyright-row .footer-copyright-col, footer .footer-navigation-row .footer-navigation-col, .search .search-col, .navbar .navbar-user-profile-container .navbar-user-profile-dropdown .navbar-user-profile-dropdown-row .navbar-user-profile-item-container {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -980,7 +980,7 @@ progress {
     width: 75%;
   }
 
-  .col-sm-10 {
+  .col-sm-10, .search .search-col {
     flex: 0 0 auto;
     width: 83.33333333%;
   }
@@ -1183,7 +1183,7 @@ progress {
     width: 58.33333333%;
   }
 
-  .col-md-8 {
+  .col-md-8, .search .search-col {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
@@ -1812,7 +1812,7 @@ progress {
     width: 41.66666667%;
   }
 
-  .col-xxl-6 {
+  .col-xxl-6, .search .search-col {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -7515,7 +7515,7 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row {
+.justify-content-center, footer .footer-copyright-row, footer .footer-social-row, footer .footer-navigation-row, .search .search-row {
   justify-content: center !important;
 }
 
@@ -7941,7 +7941,7 @@ textarea.form-control-lg {
   padding-top: 1rem !important;
 }
 
-.pt-4, footer .footer-navigation-row {
+.pt-4, footer .footer-navigation-row, .search {
   padding-top: 1.5rem !important;
 }
 
@@ -11793,6 +11793,17 @@ textarea.form-control-lg {
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(19, 57, 96, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.search .form-control {
+  color: #133960;
+}
+.search .form-control:active, .search .form-control:focus, .search .form-control:hover {
+  border-color: #133960;
+  box-shadow: none;
+}
+.search .form-control::placeholder {
+  color: rgba(19, 57, 96, 0.75);
 }
 
 html, body {
