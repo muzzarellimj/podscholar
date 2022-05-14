@@ -40,4 +40,66 @@ async function insertStageUser(user) {
 	}
 }
 
-module.exports = { findUserById, findUserByUsername, insertPrimaryUser, insertStageUser };
+async function updateUserAddCategoryFollow(userID, category) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $push: { "curation.category": { name: `${category}` } } } );
+
+}
+
+async function updateUserRemoveCategoryFollow(userID, category) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $pull: { "curation.category": { name: `${category}` } } } );
+
+}
+
+async function updateUserAddFollowedUser(userID, otherUserUsername) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $push: { "curation.category": { username: `${otherUserUsername}` } } } );
+
+}
+
+async function updateUserRemoveFollowedUser(userID, otherUserUsername) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $pull: { "curation.creator": { username: `${otherUserUsername}` } } } );
+
+}
+
+async function updateUserAddBookmark(userID, otherUserUsername, podcastTitle) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $push: { "curation.podcast.bookmark": { username: `${otherUserUsername}`, title: `${podcastTitle}` } } } );
+
+}
+
+async function updateUserRemoveBookmark(userID, otherUserUsername, podcastTitle) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $pull: { "curation.podcast.bookmark": { username: `${otherUserUsername}`, title: `${podcastTitle}` } } } );
+
+}
+
+async function updateUserAddLike(userID, otherUserUsername, podcastTitle) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $push: { "curation.podcast.like": { username: `${otherUserUsername}`, title: `${podcastTitle}` } } } );
+
+}
+
+async function updateUserRemoveLike(userID, otherUserUsername, podcastTitle) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $pull: { "curation.podcast.like": { username: `${otherUserUsername}`, title: `${podcastTitle}` } } } );
+
+}
+
+async function updateUserAddKeyword(userID, keyword) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $push: { "curation.keyword": { name: `${keyword}` } } } );
+
+}
+
+async function updateUserRemoveKeyword(userID, keyword) {
+
+	return await primary(configuration.primaryUserCollection).updateOne( { _id : new ObjectId(userID) }, { $pull: { "curation.bookmark": { name: `${keyword}` } } } );
+
+}
+
+
+
+module.exports = { findUserById, findUserByUsername, insertPrimaryUser, insertStageUser, updateUserAddCategoryFollow, updateUserRemoveCategoryFollow, updateUserAddFollowedUser, updateUserRemoveFollowedUser, updateUserAddBookmark, updateUserRemoveBookmark, updateUserAddLike, updateUserRemoveLike, updateUserAddKeyword, updateUserRemoveKeyword };
