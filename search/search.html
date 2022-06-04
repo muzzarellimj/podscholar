@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>PodScholar | Keywords</title>
+		<title>PodScholar | Search</title>
 
 		<link rel="shortcut icon" href="../asset/img/brand/brand-primary.svg">
 
@@ -17,7 +17,7 @@
 			<nav class="navbar navbar-expand-md">
 				<div class="container">
 					<div class="navbar-brand-container">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="../index.html">
 							<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
 						</a>
 					</div>
@@ -28,10 +28,10 @@
 
 					<div id="navigation" class="collapse navbar-collapse">
 						<ul class="navbar-nav">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="faq.html">Pricing & FAQ</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../faq.html">Pricing & FAQ</a></li>
+							<li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
 						</ul>
 
 						<div class="navbar-user-profile-container">
@@ -49,7 +49,7 @@
 										<div class="navbar-user-profile-dropdown-username-container">
 											<div class="navbar-user-profile-dropdown-username-stack">
 												<h6 class="navbar-user-profile-dropdown-name">Michael Muzzarelli</h6>
-												<a class="navbar-user-profile-dropdown-username" href="user/user.html?muzzarellimj">@muzzarellimj</a>
+												<a class="navbar-user-profile-dropdown-username" href="../user/user.html?muzzarellimj">@muzzarellimj</a>
 											</div>
 										</div>
 									</div>
@@ -82,19 +82,66 @@
 				</div>
 			</section>
 
-			<section class="filter-index">
+			<section class="filter">
 				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12">
-							<h6 class="filter-index-heading">keywords</h6>
-						</div>
+					<div class="filter-row">
+						<div class="filter-col">
+							<div class="responsive-icon-container">
+								<a class="responsive-icon-outline" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter"><i class="bi bi-funnel"></i><span class="filter-text">filter</span></a>
+								<a class="responsive-icon-fill" href="#filter" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filter"><i class="bi bi-funnel-fill"></i><span class="filter-text">filter</span></a>
+							</div>
 
-						<div class="col-12">
-							<h6 class="filter-index-description">A catalog of searchable keywords on our platform, and the number of podcasts that fall within them</h6>
+							<div id="filter" class="collapse">
+								<div class="filter-collapse-row">
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">category</h6>
+
+										<label for="filter-category-field" class="visually-hidden">Enter a value to filter by category</label>
+										<input id="filter-category-field" class="filter-input" list="filter-category-option-list">
+										<datalist id="filter-category-option-list"></datalist>
+
+										<div id="filter-recommend-category-container" class="filter-recommend-container">
+											<h6 class="filter-recommend-heading">recommended:</h6>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">keyword</h6>
+
+										<label for="filter-keyword-field" class="visually-hidden">Enter a value to filter by keyword</label>
+										<input id="filter-keyword-field" class="filter-input" list="filter-keyword-option-list">
+										<datalist id="filter-keyword-option-list"></datalist>
+
+										<div id="filter-recommend-keyword-container" class="filter-recommend-container">
+											<h6 class="filter-recommend-heading">recommended:</h6>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">upload date</h6>
+
+										<div class="filter-container">
+											<a class="filter-link" href="#">Today</a>
+											<a class="filter-link" href="#">This Week</a>
+											<a class="filter-link" href="#">This Month</a>
+											<a class="filter-link" href="#">This Year</a>
+										</div>
+									</div>
+
+									<div class="filter-collapse-col">
+										<h6 class="filter-heading">sort by</h6>
+
+										<div class="filter-container">
+											<a class="filter-link active" href="#">Upload Date</a>
+											<a class="filter-link" href="#">Listens</a>
+											<a class="filter-link" href="#">Bookmarks</a>
+											<a class="filter-link" href="#">Favorites</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-
-					<div id="filter-index-content" class="row py-5"></div>
 				</div>
 			</section>
 		</main>
@@ -103,11 +150,11 @@
 			<div class="container">
 				<div class="footer-navigation-row">
 					<div class="footer-navigation-col">
-						<a class="footer-navigation-item" href="about.html">About</a>
+						<a class="footer-navigation-item" href="../about.html">About</a>
 					</div>
 
 					<div class="footer-navigation-col">
-						<a class="footer-navigation-item" href="faq.html">Pricing & FAQ</a>
+						<a class="footer-navigation-item" href="../faq.html">Pricing & FAQ</a>
 					</div>
 
 					<div class="footer-navigation-col">
@@ -115,7 +162,7 @@
 					</div>
 
 					<div class="footer-navigation-col">
-						<a class="footer-navigation-item" href="contact.html">Contact</a>
+						<a class="footer-navigation-item" href="../contact.html">Contact</a>
 					</div>
 				</div>
 
@@ -129,7 +176,7 @@
 					</div>
 
 					<div class="footer-brand-col">
-						<a href="index.html"><img class="footer-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
+						<a href="../index.html"><img class="footer-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
 					</div>
 
 					<div class="footer-social-col">
@@ -153,41 +200,25 @@
 		<script src="../asset/js/front-end.js"></script>
 
 		<script>
+			const main = document.querySelector('main');
+
+			const searchFeed = createFeed('search', null, 'All results matching searched term, <em>computer</em>.');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000000');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000003');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000001');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000004');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000005');
+			searchFeed.querySelector('.podcast-preview-row').innerHTML += createPodcastPreview('p00000002');
+
+			main.append(searchFeed);
+		</script>
+
+		<script>
 			// call initially...
 			setStaticDocumentMainHeight();
 
 			// ...and on each resize
 			window.addEventListener('resize', setStaticDocumentMainHeight);
-		</script>
-
-		<script>
-			function generateTags(elementID) {
-
-				let tagGeneration = '';
-
-				const commonWords = ["the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"];
-
-				for(let element of commonWords) {
-
-					tagGeneration += `
-						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-							<div class="card rounded m-2">
-								<div class="row g-0">
-									<div class="col-12 p-2 d-flex justify-content-between">
-										<a class="filter-index-keyword" href="#">#${element}</a>
-										<span class="badge bg-secondary">1200</span>
-									</div>
-								</div>
-							</div>
-						</div>`
-
-				}
-
-				document.getElementById(elementID).innerHTML += tagGeneration;
-
-			}
-
-			generateTags('filter-index-content');
 		</script>
 	</body>
 </html>

@@ -5,11 +5,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>PodScholar | About</title>
+		<title>PodScholar | Login</title>
 
-		<link rel="shortcut icon" href="../asset/img/brand/brand-primary.svg">
+		<link rel="shortcut icon" href="asset/img/brand/brand-primary.svg">
 
-		<link rel="stylesheet" href="../asset/css/bootscholar.css">
+		<link rel="stylesheet" href="asset/css/bootscholar.css">
 	</head>
 
 	<body>
@@ -18,7 +18,7 @@
 				<div class="container">
 					<div class="navbar-brand-container">
 						<a class="navbar-brand" href="index.html">
-							<img class="navbar-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar">
+							<img class="navbar-brand-image" src="asset/img/brand/brand-primary.svg" alt="PodScholar">
 						</a>
 					</div>
 
@@ -28,9 +28,9 @@
 
 					<div id="navigation" class="collapse navbar-collapse">
 						<ul class="navbar-nav">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="faq.html">Pricing & FAQ</a></li>
-							<li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
 
@@ -42,36 +42,47 @@
 			</nav>
 		</header>
 
-		<main class="about" style="margin: auto">
+		<main class="login">
 			<div class="container">
-				<div class="about-row">
-					<div class="about-col">
-						<img class="illustration" src="../asset/img/illustration/about.svg" alt="about illustration">
-					</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8 col-md-12">
+						<div class="wrapper">
+							<div class="row no-gutters">
+								<div class="d-flex flex-column justify-content-center col-md-7 align-items-stretch">
+									<div class="w-100 p-md-5 p-4">
+										<h3 class="mb-3 text-center">Login</h3>
+										<p class="lead text-center">Log into an existing account, or <a class="inline-link" href="register.html">register a new one</a>.</p>
+										<form action="POST" id="contactForm">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="text" class="form-control" name="email" id="email" placeholder="Email">
+														<label for="email" style="display: none;"></label>
+													</div>
+												</div>
 
-					<div class="about-col">
-						<h1 class="about-heading">What is PodScholar?</h1>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+														<label for="password" style="display: none;"></label>
+													</div>
+												</div>
 
-						<p class="about-text">PodScholar is a platform for scholars to podcast their published work.
-							Each podcast provides the scholar an opportunity to discuss their manuscript with an
-							informative and conversational tone. Each podcast is created by a scholar or research
-							group and each podcast corresponds to one of the scholar’s published articles. Scholars
-							are encouraged to discuss all main parts of the published work including, but not
-							limited to the introduction, methods, results and discussion sections. Scholars now have
-							a platform to broadcast their work as a dialogue in which they have autonomy as to how
-							they want to explain and discuss their own scholarship. The rules for podcasting are
-							straight forward, but the most basic rule is one podcast per one published article!</p>
+												<div class="col-md-12">
+													<div class="d-grid">
+														<button class="btn btn-primary pb-2">Login</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
 
-						<p class="about-text">Currently, PodScholar podcasts are limited to a 20-minute maximum
-							duration. Podcasts include the journal link to help listeners find the published article
-							for further reading and dissemination. The PodScholar audio library will increase as
-							more scholars upload their content. Any published scholarship can be podcasted and
-							uploaded, regardless of date published and discipline. PodScholar aims to create the
-							world’s largest audio library of scholarly activity which is created and narrated by the
-							professionals who conducted the research. Join the PodScholar community to upload,
-							listen, and share!</p>
-
-						<a class="about-contact-link" href="contact.html">Questions? Reach out<i class="bi bi-arrow-right"></i></a>
+								<div class="illustration d-flex flex-column bg-primary col-md-5 justify-content-center">
+									<img src="asset/img/illustration/login.svg" alt="PodScholar">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -107,7 +118,7 @@
 					</div>
 
 					<div class="footer-brand-col">
-						<a href="index.html"><img class="footer-brand-image" src="../asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
+						<a href="index.html"><img class="footer-brand-image" src="asset/img/brand/brand-primary.svg" alt="PodScholar"></a>
 					</div>
 
 					<div class="footer-social-col">
@@ -127,8 +138,8 @@
 			</div>
 		</footer>
 
-		<script src="../asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="../asset/js/front-end.js"></script>
+		<script src="asset/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="asset/js/front-end.js"></script>
 
 		<script>
 			// call initially...
